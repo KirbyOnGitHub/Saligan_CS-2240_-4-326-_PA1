@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- ============================================================ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Webpage | Saligan's Website</title>
+    <link rel="shortcut icon" type="x-icon" href="player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png">
+    <link rel="stylesheet" href="Home_Webpage.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        // Define arrays of image URLs
+        const firstImages = [
+            'clouds_background/1.png',
+            'clouds_background/2.png',
+        ];
+    
+        const secondImages = [
+            'clouds_background/3.png',
+            'clouds_background/4.png',
+        ];
+    
+        // Function to switch background image
+        function switchBackground(imagesArray) {
+            let currentIndex = 0;
+            return setInterval(() => {
+                document.body.style.backgroundImage = `url(${imagesArray[currentIndex]})`;
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+            }, 2000); // 1000 = 1 sec
+        }
+    
+        // Function to switch between two sets of images and loop
+        function switchBetweenSets() {
+            let isFirstSet = true;
+            let currentInterval;
+            if (isFirstSet) {
+                currentInterval = switchBackground(firstImages);
+            } else {
+                currentInterval = switchBackground(secondImages);
+            }
+            setInterval(() => {
+                if (isFirstSet) {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(secondImages);
+                } else {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(firstImages);
+                }
+                isFirstSet = !isFirstSet; // Toggle between sets
+            }, 30000); // 1000 = 1 sec
+        }
+    
+        // Start switching between sets immediately and then switch after 20 seconds
+        switchBetweenSets();
+        setTimeout(() => {
+            switchBetweenSets();
+        }, 20000); // 1000 = 1 sec
+    </script>
+
+    <!-- ============================================================ -->
+
+</head>
+
+<!-- ============================================================ -->
+
+<body>
+
+    <!-- ============================================================ -->
+
+    <script>
+    
+        function createLeaf() {
+
+            const maxLeaves = 30;
+            const currentLeaves = document.querySelectorAll('.leaf').length;
+            
+            if (currentLeaves >= maxLeaves) {
+                return;
+            }
+
+            const leafImages = [
+                'leaves/minecraft-pink-petals-2D-1.png',
+                'leaves/minecraft-pink-petals-2D-2.png',
+                'leaves/minecraft-pink-petals-2D-3.png',
+                'leaves/minecraft-pink-petals-2D-4.png',
+                'leaves/minecraft-pink-petals-2D-5.png',
+                'leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * window.innerWidth + 'px';
+            leaf.style.top = 0 + 'px'; // Adjusted top position to start above the viewport
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360; // Random rotation between 0 to 360 degrees
+            const sway = Math.random() * 160 - 80; 
+            const animationDuration = Math.random() * 4 + 8; // Random duration between 8 to 12 seconds
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            // Randomly select between two different fall animations
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+        }
+    
+        setInterval(createLeaf,2000); // Create a new leaf every (1000 = 1 sec)
+    
+    </script>
+
+    <!-- ============================================================ -->
+
+    <main>
+
+        <!-- ============================================================ -->
+
+        <div class="coverpage-container">
+            <img src="titles/minecraft-title.png" class="minecraft_title">
+            <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"> <img src="titles/minecraft-playnow.png" class="minecraft_playnow"> </a>
+            <img src="coverpage/minecraft-cherry-grove.png" class="minecraft_coverpage">
+        </div>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <p> First of all, what is Minecraft? Minecraft is an immensely popular sandbox video game that allows players to explore, create, and survive in a vast and procedurally generated world made entirely of blocks. Developed by Mojang Studios, Minecraft has captivated millions of players worldwide with its endless possibilities and creative freedom. </p>
+        <p> In Minecraft, players find themselves in a pixelated 3D world where they can gather resources such as wood, stone, and ores by breaking blocks and then use these resources to craft tools, weapons, and various items. The game features different modes, including Survival Mode, where players must gather resources, build shelter, and fend off enemies like zombies, skeletons, and creepers to survive the night. Creative Mode offers unlimited resources and allows players to build and explore without the need to gather materials or worry about health and hunger.</p>
+        <p> One of Minecraft's most unique aspects is its procedurally generated world, meaning that each time you start a new game, the world is generated randomly, providing endless exploration opportunities. The world consists of various biomes such as forests, mountains, deserts, and oceans, each with its own distinct characteristics and resources.</p>
+        <p> Another standout feature of Minecraft is its block-based building system, where players can construct anything from simple houses to intricate castles, sprawling cities, and even functioning redstone contraptions. The game's simple yet versatile mechanics allow players to unleash their creativity and build virtually anything they can imagine.</p>
+        <p> Moreover, Minecraft offers multiplayer capabilities, allowing players to join servers and collaborate with others or engage in competitive gameplay modes. Players can also customize their experience through mods, which add new features, mechanics, and content to the game, further expanding its potential.</p>
+        <p> No journey through Minecraft would be complete without encountering its iconic mobs. From the iconic creeper to the elusive Enderman and the formidable iron golem, the game's diverse cast of creatures adds depth and excitement to every gameplay experience.</p>
+        <p> Overall, Minecraft is a game that encourages exploration, creativity, and collaboration, offering players a truly immersive and limitless gaming experience unlike any other. Its unique combination of open-world sandbox gameplay, procedural generation, and endless possibilities make it a standout title in the world of gaming.</p>
+        <p> Through our website, we aim to celebrate and explore these three pillars of Minecraft – its dimensions, biomes, and mobs – offering tips, guides, and insights to help players unlock the full potential of this beloved game. Whether you're a seasoned veteran or a newcomer to the world of Minecraft, join us on a journey of discovery and adventure in this extraordinary sandbox universe.</p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <a href="other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="titles/minecraft-title-dimensions.png" class="dimensions_title"> </a>
+        <p class="dimensions_paragraph"> Prepare to embark on thrilling adventures beyond the familiar landscapes of the Overworld. Within this pixelated universe, three distinct dimensions beckon with their own unique challenges and treasures, each offering a glimpse into the infinite possibilities of the Minecraft universe.</p>
+        <p class="dimensions_paragraph"> In the expansive Overworld, where the journey begins, players encounter a vibrant world teeming with life and adventure. From verdant forests to towering mountains, the Overworld offers a wealth of biomes to explore and conquer. Whether you're constructing towering castles, delving deep into underground mines, or embarking on epic quests, the Overworld is a realm of endless possibilities where every block holds the promise of adventure and discovery.</p>
+        <p class="dimensions_paragraph"> A realm of fiery pits and soul sand valleys, the Nether presents formidable challenges as you navigate its treacherous terrain and face off against ghasts and piglins. Yet, amidst the danger, valuable resources such as glowstone and nether quartz await those brave enough to explore its depths. Venturing into this infernal landscape requires courage and preparation, but the rewards for those who dare to tread its paths are as rich as they are perilous.</p>
+        <p class="dimensions_paragraph"> The mysterious End beckons with its dark obsidian towers and the looming presence of the ender dragon. Surviving in this desolate realm requires cunning and strategy, as you navigate through the end cities and battle against the dragon's relentless assaults. But for those who persevere, the ultimate reward of claiming the dragon egg and accessing the End Gateway awaits. The End is a realm of mystery and danger, where only the bravest adventurers dare to venture in pursuit of glory and fortune. </p>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <a href="other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="titles/minecraft-title-biomes.png" class="biomes_title"> </a>
+        <p class="biomes_paragraph"> Immerse yourself in the breathtaking diversity of Minecraft's biomes, each offering a distinct blend of terrain, vegetation, and wildlife. Traverse dense forests filled with towering trees and hidden treasures, where wolves roam freely and mushrooms flourish beneath the canopy.</p>
+        <p class="biomes_paragraph"> Explore expansive deserts where the scorching sun beats down on vast stretches of sand, concealing ancient pyramids and desert temples beneath their surface. Venture into frozen tundras where snow blankets the landscape and polar bears roam in search of prey, their icy domain fraught with peril and adventure.</p>
+        <p class="biomes_paragraph"> Whether you're navigating the towering peaks of the mountains or diving into the depths of the ocean, each biome holds its own secrets and challenges, waiting to be discovered by intrepid explorers.</p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <a href="other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="titles/minecraft-title-mobs.png" class="mobs_title"> </a>
+        <p class="mobs_paragraph"> Prepare to encounter a fascinating array of creatures as you journey through the vast expanses of Minecraft. From the iconic creepers that lurk in the shadows, their hiss signaling imminent danger, to the majestic ender dragons that rule the skies with their terrifying presence, the world is alive with a diverse ecosystem of wildlife.</p>
+        <p class="mobs_paragraph"> Tame loyal companions such as wolves and ocelots to accompany you on your adventures, their loyalty unwavering as they defend you from hostile threats. Beware the undead hordes that emerge under the cover of night, their relentless pursuit driving you to seek refuge until the dawn breaks.</p>
+        <p class="mobs_paragraph"> From the depths of the ocean to the heights of the mountains, every corner of Minecraft teems with life and danger, offering endless opportunities for discovery and adventure.</p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <a href="other_webpages/contact_webpage/Contact_Webpage.html"> <img src="titles/minecraft-title-about-me.png" class="aboutme_title"> </a>
+        
+        <p> Greetings fellow Minecraft enthusiasts! Welcome to my Minecraft website! My username is <span class="username">KirbyPlayzJava</span>, an enthusiastic Minecraft player dedicated to unraveling the wonders of this captivating sandbox universe. I'm thrilled to welcome you to my corner of the internet dedicated to all things Minecraft. As a lifelong gamer and explorer at heart, I've spent countless hours traversing the vast landscapes and uncovering the mysteries that lie within Minecraft's pixelated realms.</p>
+        <p> Ever since I was a young player in elementary school, Minecraft has been a constant companion on my journey through the digital realm. From the humble beginnings of building dirt huts and dodging creepers, to mastering the intricacies of redstone engineering and conquering the Ender Dragon, my love for Minecraft has only grown stronger with each passing year.</p>
+        <p> As a student of <span class="subjectname">"Applications Development and Emerging Technologies"</span>, I saw an opportunity to combine my passion for Minecraft with the skills and knowledge I've acquired in the classroom. Thus, this website was born—a platform where players, both seasoned veterans and newcomers alike, can find guidance, inspiration, and a sense of community in their Minecraft adventures.</p>
+        <p> With a focus on three core aspects of the game—dimensions, biomes, and mobs—my goal is to provide comprehensive insights and resources that empower players to explore, create, and thrive in the vast and dynamic world of Minecraft. While I may have learned almost everything there is to know about Minecraft through years of gameplay, I remain eager to share my knowledge and experiences with others, and to continue learning and growing alongside the ever-evolving landscape of the game.</p>
+        <p> Through my website, I aim to share my passion for Minecraft and provide fellow players with valuable insights, tips, and inspiration to enhance their gaming experience. Whether you're seeking advice on building the ultimate fortress, mastering the art of redstone engineering, or simply embarking on epic adventures with friends, I'm here to guide you every step of the way.</p>
+        <p> Whether you're seeking tips for surviving the treacherous depths of the Nether, inspiration for building your dream home in a lush biome, or strategies for facing off against the formidable mobs that roam the land, you'll find a wealth of information and resources here to support you on your Minecraft journey. So grab your pickaxe, sharpen your sword, and let's embark on an adventure together through the endless possibilities of Minecraft!</p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+    </main>
+
+    <!-- ============================================================ -->
+
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+
+    <div class="bottombar">
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="bottombar-centered-text">NOTE: Adjust the zoom setting to your liking! ^_^</div>
+    </div>
+    
+    <!-- ============================================================ -->
+
+    <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
+    <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
+    
+    <script>
+
+        var numElements = 30;
+
+        
+        var leftcontainer = document.getElementById('left-grid-container');
+    
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'left-grid-cherryleaves-block';
+            leftcontainer.appendChild(div);
+        }
+
+
+        
+        var rightcontainer = document.getElementById('right-grid-container');
+
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'right-grid-cherryleaves-block';
+            rightcontainer.appendChild(div);
+        }
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <img src="player_model/minecraft-kirbyplayzjava-skin-pointing.png" class="minecraft-skin-pointing">
+    <img src="player_model/minecraft-kirbyplayzjava-skin-sitting-pointing.png" class="minecraft-skin-sitting-pointing">
+
+    <!-- ============================================================ -->
+
+    <nav>
+        <a href="#"> <img src="player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="icons/minecraft-map-colored.png" class="icons"> </a>
+        <a href="other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="icons/minecraft-sapling-azalea.png" class="saplings"> </a>
+        <a href="other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="icons/minecraft-piglin-head.png" class="icons"> </a>
+        <a href="other_webpages/contact_webpage/Contact_Webpage.html"> <img src="icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="icons/minecraft-book-and-quill.png" class="icons"> </a> 
+        <div class="animation start-home"></div>
+    </nav>
+
+    <!-- ============================================================ -->
+
+    <audio id="menu_sound" preload="auto"> <source src="sounds/minecraft-menu-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="swoosh_sound" preload="auto"> <source src="sounds/minecraft-swoosh-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="end_dimension" preload="auto"> <source src="sounds/minecraft-end-dimension-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="disc_otherside_cut" preload="auto"> <source src="sounds/minecraft-disc-otherside-cut.mp3" type="audio/mpeg"> </audio>
+    <audio id="mob_ravager_sound" preload="auto"> <source src="sounds/minecraft-ravager.mp3" type="audio/mpeg"> </audio>
+    <audio id="villager_sound" preload="auto"> <source src="sounds/minecraft-villager-sound-trading-accepted.mp3" type="audio/mpeg"> </audio>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        var sound1 = $("#menu_sound")[0];
+        $("nav a").mouseenter(function() {
+            sound1.currentTime = 0;
+            sound1.play();
+        }).mouseleave(function() {
+            sound1.pause();
+        });
+
+        var sound2 = $("#swoosh_sound")[0];
+        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title").mouseenter(function() {
+            sound2.currentTime = 0;
+            sound2.play();
+        }).mouseleave(function() {
+            sound2.pause();
+        });
+
+        var sound3 = $("#end_dimension")[0];
+        $(".dimensions_title").mouseenter(function() {
+            sound3.currentTime = 0;
+            sound3.play();
+        }).mouseleave(function() {
+            sound3.pause();
+        });
+
+        var sound4 = $("#disc_otherside_cut")[0];
+        $(".biomes_title").mouseenter(function() {
+            sound4.currentTime = 0;
+            sound4.play();
+        }).mouseleave(function() {
+            sound4.pause();
+        });
+
+        var sound5 = $("#mob_ravager_sound")[0];
+        $(".mobs_title").mouseenter(function() {
+            sound5.currentTime = 0;
+            sound5.play();
+        }).mouseleave(function() {
+            sound5.pause();
+        });
+
+        var sound6 = $("#villager_sound")[0];
+        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
+            sound6.currentTime = 0;
+            sound6.play();
+        }).mouseleave(function() {
+            sound6.pause();
+        });
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        $(document).ready(function() {
+            // Function to add enlarged class to images
+            function enlargeImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").addClass("enlarged");
+            }
+
+            // Function to remove enlarged class from images
+            function resetImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").removeClass("enlarged");
+            }
+
+            // Event listeners to trigger image enlargement on hover over text
+            $(".aboutme_title").hover(enlargeImages, resetImages);
+            $(".username").hover(enlargeImages, resetImages);
+        });
+    </script>   
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        function createLeafAtMouse(event) {
+            const leafImages = [
+                'leaves/minecraft-pink-petals-2D-1.png',
+                'leaves/minecraft-pink-petals-2D-2.png',
+                'leaves/minecraft-pink-petals-2D-3.png',
+                'leaves/minecraft-pink-petals-2D-4.png',
+                'leaves/minecraft-pink-petals-2D-5.png',
+                'leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leafSounds = [
+                'leaves_sounds/1.MP3',
+                'leaves_sounds/2.MP3',
+                'leaves_sounds/3.MP3',
+                'leaves_sounds/4.MP3',
+                'leaves_sounds/5.MP3',
+                'leaves_sounds/6.MP3',
+                'leaves_sounds/7.MP3',
+                'leaves_sounds/8.MP3',
+                'leaves_sounds/9.MP3',
+                'leaves_sounds/10.MP3',
+                'leaves_sounds/11.MP3',
+                'leaves_sounds/12.MP3',
+                'leaves_sounds/13.MP3',
+                'leaves_sounds/14.MP3'
+            ];
+
+            // Check if the clicked element is an nth-child of the left container
+            const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
+            if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Check if the clicked element is an nth-child of the right container
+            const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
+            if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Proceed with creating a leaf
+            var Xposition = event.clientX - 10;
+            var Yposition = event.clientY + 80;
+
+            // Create the leaf element
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Xposition + 'px';
+            leaf.style.top = Yposition + 'px';
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360;
+            const sway = Math.random() * 160 - 80;
+            const animationDuration = Math.random() * 4 + 8;
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            // Play a random sound
+            const randomSoundIndex = Math.floor(Math.random() * leafSounds.length);
+            const audio = new Audio(leafSounds[randomSoundIndex]);
+            audio.play();
+            
+            // Remove the event listener once a leaf is created at this position
+            event.target.removeEventListener('click', createLeafAtMouse);
+        }
+
+        var leftGridItems = document.querySelectorAll('.left-grid-cherryleaves-block');
+        var rightGridItems = document.querySelectorAll('.right-grid-cherryleaves-block');
+
+        leftGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+
+        rightGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+    
+    </script>
+
+</body>
+
+</html>

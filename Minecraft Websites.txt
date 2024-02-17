@@ -1,0 +1,27 @@
+List of Block Textures:
+	https://minecraft.fandom.com/wiki/List_of_block_textures?fbclid=IwAR2F-L_Sn8a1hyMKKjPsW_ZN8Az_OrANIlV8VcoJ3VwT2S4Fv_uXL5hTdhg
+
+
+Minecraft Blocks and Entity CSS;
+	https://www.gamergeeks.net/apps/minecraft/web-developer-tools/css-blocks-and-entities
+
+
+https://www.blockbench.net/
+
+
+
+Minecraft Sounds:
+	https://www.myinstants.com/en/search/?name=MINECRAFT
+	https://www.101soundboards.com/boards/41084-minecraft-sfx-soundboard
+	
+
+
+
+Minecraft Avatar Maker:
+	https://mcskins.top/avatar-maker?fbclid=IwAR1q7wen4DDi-cU5wJXo6sP519HiAqrR3b1fV-NrjkJhc71DRe0HDYA_bK0
+
+Minecraft Skin - Pointing;
+{"skin":[0,-67,0],"head":[-13,0,0],"body":[0,0,0],"leftarm":[-193,0,0],"rightarm":[47,0,0],"leftleg":[-47,0,0],"rightleg":[56,0,0]}
+
+minecraft Skin - Sitting while pointing;
+{"skin":[10,70,0],"head":[-24,0,0],"body":[0,0,0],"leftarm":[30,0,0],"rightarm":[-193,0,0],"leftleg":[-124,2,-1],"rightleg":[-158,2,7]}

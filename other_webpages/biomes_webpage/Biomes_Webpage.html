@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- ============================================================ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Biomes Webpage | Saligan's Website</title>
+    <link rel="shortcut icon" type="x-icon" href="../../player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png">
+    <link rel="stylesheet" href="Biomes_Webpage.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        // Define arrays of image URLs
+        const firstImages = [
+            '../../clouds_background/1.png',
+            '../../clouds_background/2.png',
+        ];
+    
+        const secondImages = [
+            '../../clouds_background/3.png',
+            '../../clouds_background/4.png',
+        ];
+    
+        // Function to switch background image
+        function switchBackground(imagesArray) {
+            let currentIndex = 0;
+            return setInterval(() => {
+                document.body.style.backgroundImage = `url(${imagesArray[currentIndex]})`;
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+            }, 2000); // 1000 = 1 sec
+        }
+    
+        // Function to switch between two sets of images and loop
+        function switchBetweenSets() {
+            let isFirstSet = true;
+            let currentInterval;
+            if (isFirstSet) {
+                currentInterval = switchBackground(firstImages);
+            } else {
+                currentInterval = switchBackground(secondImages);
+            }
+            setInterval(() => {
+                if (isFirstSet) {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(secondImages);
+                } else {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(firstImages);
+                }
+                isFirstSet = !isFirstSet; // Toggle between sets
+            }, 30000); // 1000 = 1 sec
+        }
+    
+        // Start switching between sets immediately and then switch after 20 seconds
+        switchBetweenSets();
+        setTimeout(() => {
+            switchBetweenSets();
+        }, 20000); // 1000 = 1 sec
+    </script>
+
+    <!-- ============================================================ -->
+
+</head>
+
+<!-- ============================================================ -->
+
+<body>
+
+    <!-- ============================================================ -->
+
+    <script>
+    
+        function createLeaf() {
+
+            const maxLeaves = 30;
+            const currentLeaves = document.querySelectorAll('.leaf').length;
+            
+            if (currentLeaves >= maxLeaves) {
+                return;
+            }
+
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * window.innerWidth + 'px';
+            leaf.style.top = 0 + 'px'; // Adjusted top position to start above the viewport
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360; // Random rotation between 0 to 360 degrees
+            const sway = Math.random() * 160 - 80; 
+            const animationDuration = Math.random() * 4 + 8; // Random duration between 8 to 12 seconds
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            // Randomly select between two different fall animations
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+        }
+    
+        setInterval(createLeaf,2000); // Create a new leaf every (1000 = 1 sec)
+    
+    </script>
+
+    <!-- ============================================================ -->
+
+    <main>
+
+        <!-- ============================================================ -->
+
+        <div class="coverpage-container">
+            <img src="../../titles/minecraft-title.png" class="minecraft_title">
+            <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"> <img src="../../titles/minecraft-playnow.png" class="minecraft_playnow"> </a>
+            <img src="../../coverpage/minecraft-cherry-grove.png" class="minecraft_coverpage">
+        </div>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <p> Biomes in Minecraft are distinct regions within the game world that feature unique environmental characteristics, terrain features, and wildlife. From lush forests and towering mountains to desolate deserts and eerie swamps, each biome offers players a diverse and immersive experience as they explore the vast landscapes of the game. </p>
+        <p> In the Overworld, players will encounter a wide variety of biomes, each with its own set of features and resources to discover. From the familiar forests and plains to more exotic locales like jungles and snowy tundras, the Overworld boasts a rich tapestry of environments waiting to be explored. Additionally, with the introduction of updates and expansions, new biomes such as the lush caves have been added, further expanding the diversity of the Overworld's landscapes. </p>
+        <p> Venturing into the Nether presents a stark contrast to the Overworld, with its fiery terrain and otherworldly atmosphere. Here, players will encounter biomes such as the crimson forest, warped forest, and soul sand valley, each with its own unique hazards and resources. The Nether offers a challenging environment for players to navigate, with treacherous terrain and hostile mobs lurking around every corner. </p>
+        <p> In the End, players will find a dimension unlike any other, with its barren landscapes and floating islands of end stone. Biomes such as the End Midlands and End Barrens offer a desolate and eerie backdrop for players to explore as they journey through this mysterious dimension. The End's unique biomes are home to valuable resources and challenges, including the formidable ender dragon and the elusive shulkers found within end cities. </p>
+        <p> Overall, biomes play a crucial role in shaping the world of Minecraft, providing players with a diverse array of environments to explore and inhabit. Whether embarking on epic adventures, building sprawling settlements, or simply admiring the beauty of the natural world, biomes offer endless opportunities for discovery and exploration in the ever-expanding universe of Minecraft. </p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="overworld_header">The Overworld Biomes in Minecraft</h1>
+
+        <table>
+            <tr>
+                <th>Biome Name</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Ocean</td>
+                <td> <img src="biomes_pictures/Ocean.png" class="overworldbiome_img"> </td>
+                <td>A vast expanse of water stretching to the horizon, teeming with marine life and featuring clear blue waters and sandy ocean floors.</td>
+            </tr>
+            <tr>
+                <td>Deep Ocean</td>
+                <td> <img src="biomes_pictures/Deep_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A vast underwater biome with deep trenches, underwater caves, and a wide variety of aquatic creatures.</td>
+            </tr>
+            <tr>
+                <td>Frozen Ocean</td>
+                <td> <img src="biomes_pictures/Frozen_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A vast expanse of frozen water, featuring icebergs, snow-covered shores, and cold-adapted wildlife such as polar bears. Beneath the icy surface, diverse marine life thrives in the frigid waters.</td>
+            </tr>
+            <tr>
+                <td>Deep Frozen Ocean</td>
+                <td> <img src="biomes_pictures/Deep_Frozen_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A frozen underwater biome with icy cliffs, packed ice formations, and sparse vegetation.</td>
+            </tr>
+            <tr>
+                <td>Cold Ocean</td>
+                <td> <img src="biomes_pictures/Cold_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A chilly expanse of water with no land in sight, often dotted with icebergs and occasionally inhabited by polar bears.</td>
+            </tr>
+            <tr>
+                <td>Deep Cold Ocean</td>
+                <td> <img src="biomes_pictures/Deep_Cold_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A frigid underwater biome with deep trenches, towering kelp forests, and occasional patches of ice.</td>
+            </tr>
+            <tr>
+                <td>Lukewarm Ocean</td>
+                <td> <img src="biomes_pictures/Lukewarm_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A moderate underwater biome with clear waters, colorful coral reefs, and diverse marine life.</td>
+            </tr>
+            <tr>
+                <td>Deep Lukewarm Ocean</td>
+                <td> <img src="biomes_pictures/Deep_Lukewarm_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A temperate underwater biome with moderate depths, colorful coral reefs, and diverse marine life.</td>
+            </tr>
+            <tr>
+                <td>Warm Ocean</td>
+                <td> <img src="biomes_pictures/Warm_Ocean.png" class="overworldbiome_img"> </td>
+                <td>A temperate underwater biome with clear waters, colorful coral reefs, and diverse marine life.</td>
+            </tr>
+            <tr>
+                <td>Beach</td>
+                <td> <img src="biomes_pictures/Beach.png" class="overworldbiome_img"> </td>
+                <td>A sandy shoreline where land meets water, often featuring palm trees, sand dunes, and occasional patches of gravel.</td>
+            </tr>
+            <tr>
+                <td>Birch Forest</td>
+                <td> <img src="biomes_pictures/Birch_Forest.png" class="overworldbiome_img"> </td>
+                <td>A forest dominated by birch trees with a light-colored bark, featuring patches of grass, ferns, and occasional mushrooms.</td>
+            </tr>
+            <tr>
+                <td>Dark Forest</td>
+                <td> <img src="biomes_pictures/Dark_Forest.png" class="overworldbiome_img"> </td>
+                <td>A dense forest of dark oak trees, featuring thick undergrowth, towering mushrooms, and occasional patches of podzol.</td>
+            </tr>
+            <tr>
+                <td>Desert</td>
+                <td> <img src="biomes_pictures/Desert.png" class="overworldbiome_img"> </td>
+                <td>A barren landscape of sand dunes and rocky outcrops, often featuring cacti, dead bushes, and occasional desert wells.</td>
+            </tr>
+            <tr>
+                <td>Desert Hills</td>
+                <td> <img src="biomes_pictures/Desert_Hills.png" class="overworldbiome_img"> </td>
+                <td>Hilly terrain with sandy slopes and sparse vegetation, often featuring exposed stone and occasional desert temples.</td>
+            </tr>
+            <tr>
+                <td>Eroded Badlands</td>
+                <td> <img src="biomes_pictures/Eroded_Badlands.png" class="overworldbiome_img"> </td>
+                <td>A rugged landscape of colorful clay formations, steep cliffs, and deep ravines, often featuring mesa plateaus and abandoned mineshafts</td>
+            </tr>
+            <tr>
+                <td>Flower Forest</td>
+                <td> <img src="biomes_pictures/Flower_Forest.png" class="overworldbiome_img"> </td>
+                <td>A colorful forest biome with a wide variety of flowers, tall grass, and occasional patches of mushrooms.</td>
+            </tr>
+            <tr>
+                <td>Forest</td>
+                <td> <img src="biomes_pictures/Forest.png" class="overworldbiome_img"> </td>
+                <td>A dense woodland biome dominated by oak and birch trees, featuring lush vegetation, wildlife, and occasional patches of flowers.</td>
+            </tr>
+            <tr>
+                <td>Frozen River</td>
+                <td> <img src="biomes_pictures/Frozen_River.png" class="overworldbiome_img"> </td>
+                <td>A frozen waterway with icy shores, snow-covered banks, and occasional icebergs.</td>
+            </tr>
+            <tr>
+                <td>Gravelly Mountains</td>
+                <td> <img src="biomes_pictures/Gravelly_Mountains.png" class="overworldbiome_img"> </td>
+                <td>A mountainous biome with rocky peaks, gravelly slopes, and sparse vegetation, often featuring exposed ores and deep caves.</td>
+            </tr>
+            <tr>
+                <td>Ice Spikes</td>
+                <td> <img src="biomes_pictures/Ice_Spikes.png" class="overworldbiome_img"> </td>
+                <td>A frozen biome with towering ice spikes, frozen lakes, and icy caverns, often featuring polar bears and stray mobs.</td>
+            </tr>
+            <tr>
+                <td>Jungle</td>
+                <td> <img src="biomes_pictures/Jungle.png" class="overworldbiome_img"> </td>
+                <td>A dense tropical jungle biome with towering trees, thick undergrowth, and vibrant vegetation, often featuring jungle temples and ocelots.</td>
+            </tr>
+            <tr>
+                <td>Sparse Jungle</td>
+                <td> <img src="biomes_pictures/Jungle_Edge.png" class="overworldbiome_img"> </td>
+                <td>A transitional biome between jungle and other biomes, featuring scattered trees, tall grass, and occasional patches of bamboo.</td>
+            </tr>
+            <tr>
+                <td>Modified Badlands Plateau:</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A variant of the badlands biome with steep cliffs, colorful clay formations, and sparse vegetation.</td>
+            </tr>
+            <tr>
+                <td>Modified Gravelly Mountains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A variant of the mountains biome with rocky peaks, gravelly slopes, and sparse vegetation, often featuring exposed ores and deep caves.</td>
+            </tr>
+            <tr>
+                <td>Modified Jungle</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A variant of the jungle biome with dense vegetation, towering trees, and occasional patches of bamboo and cocoa beans.</td>
+            </tr>
+            <tr>
+                <td>Modified Jungle Edge</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A transitional biome between jungle and other biomes, featuring scattered trees, tall grass, and occasional patches of bamboo.</td>
+            </tr>
+            <tr>
+                <td>Modified Wooded Badlands Plateau</td>
+                <td> <img src="biomes_pictures/m.png" class="overworldbiome_img"> </td>
+                <td>A variant of the badlands plateau biome with steep cliffs, colorful clay formations, and sparse vegetation.</td>
+            </tr>
+            <tr>
+                <td>Mountain Edge</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A transitional biome between mountains and other biomes, featuring rocky cliffs, sparse vegetation, and occasional patches of snow.</td>
+            </tr>
+            <tr>
+                <td>Mountains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A mountainous biome with towering peaks, rocky slopes, and sparse vegetation, often featuring exposed ores and deep caves.</td>
+            </tr>
+            <tr>
+                <td>Mushroom Fields</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A unique biome with giant mushrooms, mycelium-covered terrain, and eerie atmosphere, often featuring mooshrooms and mushrooms.</td>
+            </tr>
+            <tr>
+                <td>Mushroom Field Shore</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A transitional biome between mushroom fields and other biomes, featuring sandy shores, mycelium-covered terrain, and occasional giant mushrooms.</td>
+            </tr>
+            <tr>
+                <td>Plains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A flat and expansive biome with grassy plains, scattered trees, and occasional patches of flowers and tall grass.</td>
+            </tr>
+            <tr>
+                <td>River</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A winding waterway that cuts through the landscape, connecting larger bodies of water such as oceans and lakes, often featuring a variety of aquatic life.</td>
+            </tr>
+            <tr>
+                <td>Savanna</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A dry and arid biome with sparse vegetation, acacia trees, and occasional patches of tall grass and flowers.</td>
+            </tr>
+            <tr>
+                <td>Savanna Plateau</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Elevated terrain with steep cliffs and flat plateaus, often featuring acacia trees, tall grass, and scattered rocks.</td>
+            </tr>
+            <tr>
+                <td>Shattered Savanna</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A variant of the savanna biome with rugged terrain, shattered cliffs, and sparse vegetation, often featuring exposed stone and clay.</td>
+            </tr>
+            <tr>
+                <td>Shattered Savanna Plateau</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Elevated terrain with shattered cliffs and flat plateaus, often featuring rugged terrain, sparse vegetation, and scattered rocks.</td>
+            </tr>
+            <tr>
+                <td>Snowy Beach</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A cold and desolate shoreline with icy shores, snow-covered dunes, and freezing temperatures.</td>
+            </tr>
+            <tr>
+                <td>Snowy Taiga</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A cold forest biome with tall spruce trees, snow-covered terrain, and occasional patches of snow and ice.</td>
+            </tr>
+            <tr>
+                <td>Snowy Taiga Hills</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Hilly terrain with tall spruce trees, snow-covered slopes, and occasional patches of snow and ice.</td>
+            </tr>
+            <tr>
+                <td>Snowy Taiga Mountains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Mountainous terrain with towering spruce trees, snow-covered peaks, and freezing temperatures.</td>
+            </tr>
+            <tr>
+                <td>Snowy Tundra</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A frigid biome with frozen plains, snow-covered terrain, and occasional patches of ice and packed ice.</td>
+            </tr>
+            <tr>
+                <td>Stone Shore</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A rocky coastline with jagged cliffs, rocky outcrops, and crashing waves, often featuring exposed stone and gravel.</td>
+            </tr>
+            <tr>
+                <td>Sunflower Plains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A flat and expansive biome with sunflower fields, grassy plains, and occasional patches of flowers and tall grass.</td>
+            </tr>
+            <tr>
+                <td>Badlands Plateau</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Elevated desert biomes characterized by their rugged terrain, towering plateaus, and colorful clay formations in Minecraft. </td>
+            </tr>
+            <tr>
+                <td>Taiga</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A cold forest biome with tall spruce trees, dense undergrowth, and occasional patches of snow and ice.</td>
+            </tr>
+            <tr>
+                <td>Taiga Hills</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Hilly terrain with tall spruce trees, dense undergrowth, and occasional patches of snow and ice.</td>
+            </tr>
+            <tr>
+                <td>Taiga Mountains</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Mountainous terrain with towering spruce trees, rugged cliffs, and dense undergrowth.</td>
+            </tr>
+            <tr>
+                <td>Wooded Badlands Plateau</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Elevated terrain with steep cliffs and flat plateaus, often featuring colorful clay formations, sparse vegetation, and exposed ores.</td>
+            </tr>
+            <tr>
+                <td>Wooded Hills</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Hilly terrain with scattered trees, grassy slopes, and occasional patches of flowers and tall grass.</td>
+            </tr>
+            <tr>
+                <td>Bamboo Jungle</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A dense jungle biome with towering bamboo, lush vegetation, and occasional patches of cocoa beans and jungle trees.</td>
+            </tr>
+            <tr>
+                <td>Bamboo Jungle Hills</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Hilly terrain with dense bamboo forests, towering trees, and occasional patches of cocoa beans and jungle trees.</td>
+            </tr>
+            <tr>
+                <td>Caves</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Underground passages of varying sizes and shapes, rich in resources and mysteries, awaiting exploration in the darkness.</td>
+            </tr>
+            <tr>
+                <td>Lush Caves</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Subterranean chambers adorned with vibrant vegetation, glowing flora, and cascading waterfalls, creating a lush and verdant underground oasis.</td>
+            </tr>
+            <tr>
+                <td>Dripstone Caves</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Underground caverns filled with stalactites and stalagmites, formed over millennia by dripping water, creating a surreal and otherworldly landscape.</td>
+            </tr>
+            <tr>
+                <td>Deep Dark Biome</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A mysterious and foreboding underground realm shrouded in darkness, where only the brave venture forth to uncover its secrets amidst the eerie silence.</td>
+            </tr>
+            <tr>
+                <td>Swamp</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>A wetland biome with murky waters, dense vegetation, and eerie atmosphere, often featuring swamp trees, vines, and lily pads.</td>
+            </tr>
+            <tr>
+                <td>Mangrove Swamp</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Coastal biome adorned with mangrove trees, their sprawling canopies and intricate root systems creating a distinctive and picturesque landscape in Minecraft.</td>
+            </tr>
+            <tr>
+                <td>Cherry Grove</td>
+                <td> <img src="biomes_pictures/.png" class="overworldbiome_img"> </td>
+                <td>Lush grasslands adorned with pink-petaled cherry trees, emitting vibrant petal particles in Minecraft. Bee nests cling to these trees, providing a picturesque landscape ideal for Survival mode.</td>
+            </tr>
+        </table>    
+
+        <p class="overworld_paragraph"></p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="nether_header">The Nether Biomes in Minecraft</h1>
+
+        <img src="?" class="netherbiome_img">
+
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+        </table>    
+
+        <p class="nether_paragraph"></p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="end_header">The End Dimension in Minecraft</h1>
+
+        <img src="?" class="endbiome_img">
+
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+        </table>    
+
+        <p class="end_paragraph"></p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+    </main>
+
+    <!-- ============================================================ -->
+
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+
+    <div class="bottombar">
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="bottombar-centered-text">NOTE: Adjust the zoom setting to your liking! ^_^</div>
+    </div>
+    
+    <!-- ============================================================ -->
+
+    <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
+    <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
+    
+    <script>
+
+        var numElements = 30;
+
+        
+        var leftcontainer = document.getElementById('left-grid-container');
+    
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'left-grid-cherryleaves-block';
+            leftcontainer.appendChild(div);
+        }
+
+
+        
+        var rightcontainer = document.getElementById('right-grid-container');
+
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'right-grid-cherryleaves-block';
+            rightcontainer.appendChild(div);
+        }
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-pointing.png" class="minecraft-skin-pointing">
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-sitting-pointing.png" class="minecraft-skin-sitting-pointing">
+
+    <!-- ============================================================ -->
+
+    <nav>
+        <a href="../../Home_Webpage.html"> <img src="../../player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="../../icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="../../other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="../../icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="../../icons/minecraft-map-colored.png" class="icons"> </a>
+        <a href="../../other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="../../icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="../../icons/minecraft-sapling-azalea.png" class="saplings"> </a>
+        <a href="../../other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="../../icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="../../icons/minecraft-piglin-head.png" class="icons"> </a>
+        <a href="../../other_webpages/contact_webpage/Contact_Webpage.html"> <img src="../../icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="../../icons/minecraft-book-and-quill.png" class="icons"> </a> 
+        <div class="animation start-biomes"></div>
+    </nav>
+
+    <!-- ============================================================ -->
+
+    <audio id="menu_sound" preload="auto"> <source src="../../sounds/minecraft-menu-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="swoosh_sound" preload="auto"> <source src="../../sounds/minecraft-swoosh-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="end_dimension" preload="auto"> <source src="../../sounds/minecraft-end-dimension-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="disc_otherside_cut" preload="auto"> <source src="../../sounds/minecraft-disc-otherside-cut.mp3" type="audio/mpeg"> </audio>
+    <audio id="mob_ravager_sound" preload="auto"> <source src="../../sounds/minecraft-ravager.mp3" type="audio/mpeg"> </audio>
+    <audio id="villager_sound" preload="auto"> <source src="../../sounds/minecraft-villager-sound-trading-accepted.mp3" type="audio/mpeg"> </audio>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        var sound1 = $("#menu_sound")[0];
+        $("nav a").mouseenter(function() {
+            sound1.currentTime = 0;
+            sound1.play();
+        }).mouseleave(function() {
+            sound1.pause();
+        });
+
+        var sound2 = $("#swoosh_sound")[0];
+        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title").mouseenter(function() {
+            sound2.currentTime = 0;
+            sound2.play();
+        }).mouseleave(function() {
+            sound2.pause();
+        });
+
+        var sound3 = $("#end_dimension")[0];
+        $(".dimensions_title").mouseenter(function() {
+            sound3.currentTime = 0;
+            sound3.play();
+        }).mouseleave(function() {
+            sound3.pause();
+        });
+
+        var sound4 = $("#disc_otherside_cut")[0];
+        $(".biomes_title").mouseenter(function() {
+            sound4.currentTime = 0;
+            sound4.play();
+        }).mouseleave(function() {
+            sound4.pause();
+        });
+
+        var sound5 = $("#mob_ravager_sound")[0];
+        $(".mobs_title").mouseenter(function() {
+            sound5.currentTime = 0;
+            sound5.play();
+        }).mouseleave(function() {
+            sound5.pause();
+        });
+
+        var sound6 = $("#villager_sound")[0];
+        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
+            sound6.currentTime = 0;
+            sound6.play();
+        }).mouseleave(function() {
+            sound6.pause();
+        });
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        $(document).ready(function() {
+            // Function to add enlarged class to images
+            function enlargeImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").addClass("enlarged");
+            }
+
+            // Function to remove enlarged class from images
+            function resetImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").removeClass("enlarged");
+            }
+
+            // Event listeners to trigger image enlargement on hover over text
+            $(".aboutme_title").hover(enlargeImages, resetImages);
+            $(".username").hover(enlargeImages, resetImages);
+        });
+    </script>   
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        function createLeafAtMouse(event) {
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leafSounds = [
+                '../../leaves_sounds/1.MP3',
+                '../../leaves_sounds/2.MP3',
+                '../../leaves_sounds/3.MP3',
+                '../../leaves_sounds/4.MP3',
+                '../../leaves_sounds/5.MP3',
+                '../../leaves_sounds/6.MP3',
+                '../../leaves_sounds/7.MP3',
+                '../../leaves_sounds/8.MP3',
+                '../../leaves_sounds/9.MP3',
+                '../../leaves_sounds/10.MP3',
+                '../../leaves_sounds/11.MP3',
+                '../../leaves_sounds/12.MP3',
+                '../../leaves_sounds/13.MP3',
+                '../../leaves_sounds/14.MP3'
+            ];
+
+            // Check if the clicked element is an nth-child of the left container
+            const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
+            if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Check if the clicked element is an nth-child of the right container
+            const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
+            if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Proceed with creating a leaf
+            var Xposition = event.clientX - 10;
+            var Yposition = event.clientY + 80;
+
+            // Create the leaf element
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Xposition + 'px';
+            leaf.style.top = Yposition + 'px';
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360;
+            const sway = Math.random() * 160 - 80;
+            const animationDuration = Math.random() * 4 + 8;
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            // Play a random sound
+            const randomSoundIndex = Math.floor(Math.random() * leafSounds.length);
+            const audio = new Audio(leafSounds[randomSoundIndex]);
+            audio.play();
+            
+            // Remove the event listener once a leaf is created at this position
+            event.target.removeEventListener('click', createLeafAtMouse);
+        }
+
+        var leftGridItems = document.querySelectorAll('.left-grid-cherryleaves-block');
+        var rightGridItems = document.querySelectorAll('.right-grid-cherryleaves-block');
+
+        leftGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+
+        rightGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+    
+    </script>
+
+</body>
+
+</html>

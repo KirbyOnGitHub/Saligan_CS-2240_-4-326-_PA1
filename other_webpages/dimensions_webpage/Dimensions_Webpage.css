@@ -1,0 +1,697 @@
+
+.leaf {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    z-index: 0;
+    background-size: cover;
+}
+
+@keyframes fall_clockwise {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 40px)) rotate(360deg) translateX(20px);
+    }
+}
+
+@keyframes fall_counterclockwise {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 40px)) rotate(-360deg) translateX(-20px);
+    }
+}
+
+/*============================================================*/
+
+*{
+    font-family: 'Monocraft';
+    src: url(../../custom_fonts/Monocraft.ttf);
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    background-position: static;
+    background-size: 70%;
+}
+
+main{
+    position: relative;
+    text-align: center;
+    top: -20px;
+}
+
+/*============================================================*/
+
+.coverpage-container {
+    top: 0px;
+    position: relative;
+    width: fit-content; 
+    width: 100%;
+    margin-top: 0px;
+    margin: auto;
+}
+
+.minecraft_coverpage{
+    top: 0px;
+    height: 100%;
+    width: 95%;
+    border: 10px solid black;
+    margin: auto;
+    display: block;
+    margin-top: 20px;;
+    margin-bottom: 5%;
+}
+
+.minecraft_title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+}
+
+.minecraft_playnow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+    width: 350px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.minecraft_playnow:hover {
+    width: 400px; 
+}
+
+/*============================================================*/
+
+p{
+    z-index: 1;
+    position: relative;
+    text-align: justify;
+    color: rgb(190, 188, 188);
+    background-color: #213144;
+    border: 5px solid #131c28;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 1.5rem;
+    font-size: 25px;
+    line-height: 45px;
+}
+
+.username{
+    color:#e56c10;
+    -webkit-text-stroke: 0.8px #e56c10;
+}
+
+.subjectname{
+    color:#e56c10;
+    -webkit-text-stroke: 0.8px #e56c10;
+}
+
+.linebreaker{
+    background-image: url('../../textures/minecraft-bamboo-customplanks.png');
+    background-size: 78.4px;
+    border: 2px solid #8da781;
+    margin-top: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 5%;
+    height:20px;
+}
+
+/*============================================================*/
+
+.aboutme_title {
+    height: 100%;
+    width: 35%;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    margin: 25px;
+}
+
+.aboutme_title:hover {
+    height: 80%;
+    width: 45%;
+}
+
+.aboutme_title:hover::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.aboutme_title:hover::after {
+    content: ''; 
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+/*============================================================*/
+
+.sidebar-left{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 77px;
+    height: 100%;
+    background-size: 76.8px;
+    background-image: url('../../textures/minecraft-cherry-log-side.png'); 
+}
+
+.sidebar-right{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 77px;
+    height: 100%;
+    background-size: 76.8px;
+    background-image: url('../../textures/minecraft-cherry-log-side.png'); 
+}
+
+.bottombar{
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 77px;
+    background-size: 76.8px;
+    background-image: url('../../textures/minecraft-moss.png'); 
+    border-top: 5px solid #265e37;
+    display: grid;
+    grid-template-columns: repeat(27, 1fr); 
+    grid-template-rows: auto;
+}
+
+.bottombar span {
+    position: relative;
+}
+
+.bottombar span:nth-child(1)::after,
+.bottombar span:nth-child(13)::after,
+.bottombar span:nth-child(16)::after,
+.bottombar span:nth-child(19)::after,
+.bottombar span:nth-child(25)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-1.png');
+    background-size: cover;
+}
+
+.bottombar span:nth-child(4)::after,
+.bottombar span:nth-child(7)::after,
+.bottombar span:nth-child(10)::after,
+.bottombar span:nth-child(22)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-3.png');
+    background-size: cover;
+}
+
+.bottombar span:nth-child(5)::after,
+.bottombar span:nth-child(11)::after,
+.bottombar span:nth-child(14)::after,
+.bottombar span:nth-child(20)::after,
+.bottombar span:nth-child(23)::after,
+.bottombar span:nth-child(26)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 85%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-4.png');
+    background-size: cover;
+}
+
+.bottombar span:nth-child(2)::after,
+.bottombar span:nth-child(8)::after,
+.bottombar span:nth-child(17)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 85%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-2.png');
+    background-size: cover;
+}
+
+.bottombar span:nth-child(9)::after,
+.bottombar span:nth-child(12)::after,
+.bottombar span:nth-child(15)::after,
+.bottombar span:nth-child(18)::after,
+.bottombar span:nth-child(24)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-5.png');
+    background-size: cover;
+}
+
+.bottombar span:nth-child(3)::after,
+.bottombar span:nth-child(6)::after,
+.bottombar span:nth-child(21)::after,
+.bottombar span:nth-child(27)::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 30px; 
+    height: 30px; 
+    background-image: url('../../leaves/minecraft-pink-petals-2D-6.png');
+    background-size: cover;
+}
+
+.bottombar-centered-text {
+    grid-column: 1 / span 27;
+    grid-row: 1; 
+    text-align: center;
+    line-height: 77px;
+    color:white;
+}
+
+/*============================================================*/
+
+.left-grid-container-cherryleaves {
+    display: grid;
+    grid-template-columns: repeat(4, 77px); 
+    grid-template-rows: repeat(7, 77px); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.left-grid-cherryleaves-block{
+    background-size: 76.8px;
+}
+
+.left-grid-cherryleaves-block:nth-child(1),
+.left-grid-cherryleaves-block:nth-child(2),
+.left-grid-cherryleaves-block:nth-child(3),
+.left-grid-cherryleaves-block:nth-child(5),
+.left-grid-cherryleaves-block:nth-child(6),
+.left-grid-cherryleaves-block:nth-child(7),
+.left-grid-cherryleaves-block:nth-child(8),
+.left-grid-cherryleaves-block:nth-child(9),
+.left-grid-cherryleaves-block:nth-child(10),
+.left-grid-cherryleaves-block:nth-child(11),
+.left-grid-cherryleaves-block:nth-child(12),
+.left-grid-cherryleaves-block:nth-child(13),
+.left-grid-cherryleaves-block:nth-child(14),
+.left-grid-cherryleaves-block:nth-child(15),
+.left-grid-cherryleaves-block:nth-child(16),
+.left-grid-cherryleaves-block:nth-child(17),
+.left-grid-cherryleaves-block:nth-child(18),
+.left-grid-cherryleaves-block:nth-child(19),
+.left-grid-cherryleaves-block:nth-child(21),
+.left-grid-cherryleaves-block:nth-child(23),
+.left-grid-cherryleaves-block:nth-child(27) {
+    background-image: url('../../textures/minecraft-cherry-leaves.png');
+}
+
+.left-grid-cherryleaves-block:nth-child(1),
+.left-grid-cherryleaves-block:nth-child(2),
+.left-grid-cherryleaves-block:nth-child(5),
+.left-grid-cherryleaves-block:nth-child(6),
+.left-grid-cherryleaves-block:nth-child(7),
+.left-grid-cherryleaves-block:nth-child(9),
+.left-grid-cherryleaves-block:nth-child(10),
+.left-grid-cherryleaves-block:nth-child(11),
+.left-grid-cherryleaves-block:nth-child(13),
+.left-grid-cherryleaves-block:nth-child(14),
+.left-grid-cherryleaves-block:nth-child(15),
+.left-grid-cherryleaves-block:nth-child(18) {
+    background-color: lightpink;
+}
+
+/*============================================================*/
+
+.right-grid-container-cherryleaves {
+    display: grid;
+    grid-template-columns: repeat(4, 77px); 
+    grid-template-rows: repeat(7, 77px); 
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.right-grid-cherryleaves-block{
+    background-size: 76.8px;
+}
+
+.right-grid-cherryleaves-block:nth-child(2),
+.right-grid-cherryleaves-block:nth-child(3),
+.right-grid-cherryleaves-block:nth-child(4),
+.right-grid-cherryleaves-block:nth-child(5),
+.right-grid-cherryleaves-block:nth-child(6),
+.right-grid-cherryleaves-block:nth-child(7),
+.right-grid-cherryleaves-block:nth-child(8),
+.right-grid-cherryleaves-block:nth-child(9),
+.right-grid-cherryleaves-block:nth-child(10),
+.right-grid-cherryleaves-block:nth-child(11),
+.right-grid-cherryleaves-block:nth-child(12),
+.right-grid-cherryleaves-block:nth-child(13),
+.right-grid-cherryleaves-block:nth-child(14),
+.right-grid-cherryleaves-block:nth-child(15),
+.right-grid-cherryleaves-block:nth-child(16),
+.right-grid-cherryleaves-block:nth-child(17),
+.right-grid-cherryleaves-block:nth-child(19),
+.right-grid-cherryleaves-block:nth-child(20),
+.right-grid-cherryleaves-block:nth-child(23),
+.right-grid-cherryleaves-block:nth-child(24),
+.right-grid-cherryleaves-block:nth-child(27) {
+    background-image: url('../../textures/minecraft-cherry-leaves.png');
+}
+
+.right-grid-cherryleaves-block:nth-child(3),
+.right-grid-cherryleaves-block:nth-child(4),
+.right-grid-cherryleaves-block:nth-child(6),
+.right-grid-cherryleaves-block:nth-child(7),
+.right-grid-cherryleaves-block:nth-child(8),
+.right-grid-cherryleaves-block:nth-child(10),
+.right-grid-cherryleaves-block:nth-child(11),
+.right-grid-cherryleaves-block:nth-child(12),
+.right-grid-cherryleaves-block:nth-child(15),
+.right-grid-cherryleaves-block:nth-child(16),
+.right-grid-cherryleaves-block:nth-child(19) {
+    background-color: lightpink;
+}
+
+/*============================================================*/
+
+.minecraft-skin-pointing {
+    z-index: 2;
+    position: fixed;
+    height: auto;
+    margin: -20px;
+    right: -45px;
+    bottom: 60px;
+    width: 300px;
+    pointer-events: auto;
+    transition: all 0.3s ease; 
+}
+
+.minecraft-skin-pointing:hover {
+    width: 320px;
+}
+
+.minecraft-skin-sitting-pointing {
+    z-index: 2;
+    position: fixed;
+    height: auto;
+    margin: -20px;
+    left: -45px;
+    bottom: -10px;
+    width: 300px;
+    pointer-events: auto;
+    transition: all 0.3s ease; 
+}
+
+.minecraft-skin-sitting-pointing:hover {
+    width: 320px;
+}
+
+.minecraft-skin-pointing.enlarged,
+.minecraft-skin-sitting-pointing.enlarged {
+    animation: enlargeAnimation 0.7s infinite alternate; 
+}
+
+@keyframes enlargeAnimation {
+    0% { width: 300px; }
+    100% { width: 330px; }
+}
+
+/*============================================================*/
+
+nav {
+    font-family: 'Monocraft';
+    src: url(custom_fonts/Monocraft.ttf);
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 922px;
+    height: 77px;
+    background-image: url('../../textures/minecraft-redstone-lamp-off-redstone.png');
+    background-size: 76.8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.2px #ff8400;
+    color: #f1cd1a;
+    text-decoration: none;
+    line-height: 77px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.5s ease; 
+}
+
+nav a:hover {
+    font-size: 19px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.1px #f1cd1a;
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    nav {
+        width: 80%;
+        max-width: 922px; 
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-image: url('../../textures/minecraft-redstone-lamp-on-redstone.png');
+    background-size: 76.8px;
+    width: 100px;
+    transition: opacity 1s ease-out 0s;
+    opacity: 0;
+}
+
+nav a:hover ~.animation{
+    opacity: 1;
+}
+
+a:nth-child(1){
+    width: 153.6px;
+}
+
+nav .start-home,a:nth-child(1):hover~.animation{
+    width: 153.6px;
+    left: 0px;
+}
+
+a:nth-child(2){
+    background-image: url('../../textures/minecraft-redstone-lamp-on-redstone.png');
+    background-size: 76.8px;
+    font-size: 19px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.1px #f1cd1a;
+    color: #ffffff;
+    width: 230.4px;
+}
+
+nav .start-dimensions,a:nth-child(2):hover~.animation{
+    width: 230.4px;
+    left: 153.6px;
+}
+
+a:nth-child(3){
+    width: 153.6px;
+}
+
+nav .start-biomes,a:nth-child(3):hover~.animation{
+    width: 153.6px;
+    left: 384px;
+}
+
+a:nth-child(4){
+    width: 153.6px;
+}
+
+nav .start-mobs,a:nth-child(4):hover~.animation{
+    width: 153.6px;
+    left: 537.6px;
+}
+
+a:nth-child(5){
+    width: 230.4px;
+}
+
+nav .start-contact,a:nth-child(5):hover~.animation{
+    width: 230.4px;
+    left: 691.2px;
+}
+
+/*============================================================*/
+
+.saplings{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+}
+
+.icons{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 8px;
+}
+
+.skinhead{
+    width: 38px;
+    height: 38px;
+    position: relative;
+    top: 12px;
+}
+
+/*============================================================*/
+
+h2 {
+    text-align: center;
+}
+
+table {
+    font-size: 25px;
+    width: 65%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+th, td {
+    color: #3f3d3d;
+    border: 5px solid #8f8f8f;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+    background-color: #e4dcdc;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+/*============================================================*/
+
+.overworld_header{
+    color: #143c26;
+    font-size: 50px;
+}
+
+.overworld_img{
+    width: 70%;
+    border: 5px solid #143c26;
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.overworld_paragraph{
+    color: rgb(41, 200, 142);
+    background-color: #2c6d37;
+    border: 5px solid #143c26;
+    border-radius: 5px;
+}
+
+/*============================================================*/
+
+.nether_header{
+    color: #560b0b;
+    font-size: 50px;
+}
+
+.nether_img{
+    width: 70%;
+    border: 5px solid #560b0b;
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.nether_paragraph{
+    color: rgb(235, 63, 63);
+    background-color: #8a2020;
+    border: 5px solid #560b0b;
+    border-radius: 5px;
+}
+
+/*============================================================*/
+
+.end_header{
+    color: #6d0d3f;
+    font-size: 50px;
+}
+
+.end_img{
+    width: 70%;
+    border: 5px solid #6d0d3f;
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.end_paragraph{
+    color: rgb(82, 7, 81);
+    background-color: #c4377e;
+    border: 5px solid #6d0d3f;
+    border-radius: 5px;
+}
+
+/*============================================================*/

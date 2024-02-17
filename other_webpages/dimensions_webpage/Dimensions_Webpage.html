@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- ============================================================ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Dimensions Webpage | Saligan's Website</title>
+    <link rel="shortcut icon" type="x-icon" href="../../player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png">
+    <link rel="stylesheet" href="Dimensions_Webpage.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        // Define arrays of image URLs
+        const firstImages = [
+            '../../clouds_background/1.png',
+            '../../clouds_background/2.png',
+        ];
+    
+        const secondImages = [
+            '../../clouds_background/3.png',
+            '../../clouds_background/4.png',
+        ];
+    
+        // Function to switch background image
+        function switchBackground(imagesArray) {
+            let currentIndex = 0;
+            return setInterval(() => {
+                document.body.style.backgroundImage = `url(${imagesArray[currentIndex]})`;
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+            }, 2000); // 1000 = 1 sec
+        }
+    
+        // Function to switch between two sets of images and loop
+        function switchBetweenSets() {
+            let isFirstSet = true;
+            let currentInterval;
+            if (isFirstSet) {
+                currentInterval = switchBackground(firstImages);
+            } else {
+                currentInterval = switchBackground(secondImages);
+            }
+            setInterval(() => {
+                if (isFirstSet) {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(secondImages);
+                } else {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(firstImages);
+                }
+                isFirstSet = !isFirstSet; // Toggle between sets
+            }, 30000); // 1000 = 1 sec
+        }
+    
+        // Start switching between sets immediately and then switch after 20 seconds
+        switchBetweenSets();
+        setTimeout(() => {
+            switchBetweenSets();
+        }, 20000); // 1000 = 1 sec
+    </script>
+
+    <!-- ============================================================ -->
+
+</head>
+
+<!-- ============================================================ -->
+
+<body>
+
+    <!-- ============================================================ -->
+
+    <script>
+    
+        function createLeaf() {
+
+            const maxLeaves = 30;
+            const currentLeaves = document.querySelectorAll('.leaf').length;
+            
+            if (currentLeaves >= maxLeaves) {
+                return;
+            }
+
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * window.innerWidth + 'px';
+            leaf.style.top = 0 + 'px'; // Adjusted top position to start above the viewport
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360; // Random rotation between 0 to 360 degrees
+            const sway = Math.random() * 160 - 80; 
+            const animationDuration = Math.random() * 4 + 8; // Random duration between 8 to 12 seconds
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            // Randomly select between two different fall animations
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+        }
+    
+        setInterval(createLeaf,2000); // Create a new leaf every (1000 = 1 sec)
+    
+    </script>
+
+    <!-- ============================================================ -->
+
+    <main>
+
+        <!-- ============================================================ -->
+
+        <div class="coverpage-container">
+            <img src="../../titles/minecraft-title.png" class="minecraft_title">
+            <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"> <img src="../../titles/minecraft-playnow.png" class="minecraft_playnow"> </a>
+            <img src="../../coverpage/minecraft-cherry-grove.png" class="minecraft_coverpage">
+        </div>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <p> Dimensions in Minecraft are fascinating realms that offer diverse landscapes, challenges, and opportunities for exploration. Each dimension is characterized by its unique way of generation, distinct biomes and structures, and other features that set it apart from the others. From the familiar landscapes of the Overworld to the mysterious depths of the Nether and the desolate expanses of the End, players can embark on thrilling adventures across multiple dimensions. </p>
+        <p> Accessing these dimensions is often achieved through the use of portals, mystical gateways that transport players from one world to another. These portals can be found naturally generated in the game world or created by players using specialized materials and knowledge. Stepping through a portal is akin to stepping into another reality, where the landscape and environment may be drastically different from what players are accustomed to. </p>
+        <p> One of the most notable aspects of dimensions in Minecraft is their unique generation patterns, biomes, and structures. Each dimension has its own set of biomes, ranging from lush forests and towering mountains to desolate wastelands and fiery caverns. Structures such as fortresses, temples, and dungeons can also be found scattered throughout these dimensions, offering valuable loot and challenges for intrepid explorers. </p>
+        <p> In addition to their diverse landscapes, dimensions may also feature unique gameplay mechanics and environmental conditions. The passage of time, for example, may work differently or not exist at all in certain dimensions, leading to perpetual daylight or eternal darkness. Similarly, weather patterns may vary, with some dimensions experiencing constant rainfall or snowfall, while others remain shrouded in perpetual fog or mist. </p>
+        <p> Respawn points, such as beds and respawn anchors, may also behave differently in different dimensions. In some realms, these respawn points may be rendered ineffective, forcing players to rely on alternative methods for respawning or risk losing progress upon death. </p>
+        <p> Overall, dimensions in Minecraft are not just alternate worlds to explore; they are gateways to new experiences and challenges that await daring adventurers. Whether you're delving into the depths of the Nether, traversing the endless expanse of the End, or venturing into custom dimensions of your own creation, the journey through Minecraft's dimensions is bound to be filled with excitement, discovery, and endless possibilities. </p>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="overworld_header">The Overworld Dimension in Minecraft</h1>
+
+        <img src="dimensions_pictures/overworld1.png" class="overworld_img">
+        <img src="dimensions_pictures/overworld2.png" class="overworld_img">
+        <img src="dimensions_pictures/overworld3.png" class="overworld_img">
+        <img src="dimensions_pictures/overworld4.png" class="overworld_img">
+        <img src="dimensions_pictures/overworld5.png" class="overworld_img">
+        <img src="dimensions_pictures/overworld6.png" class="overworld_img">
+
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Biome Diversity</td>
+                <td>The Overworld boasts the widest variety of biomes, offering diverse landscapes ranging from forests and plains to mountains and deserts.</td>
+            </tr>
+            <tr>
+                <td>Surface and Underground Biomes</td>
+                <td>Both above ground and below, the Overworld features unique biomes, providing players with opportunities for exploration and resource gathering.</td>
+            </tr>
+            <tr>
+                <td>Ocean Exploration</td>
+                <td>Vast oceans cover large portions of the Overworld, offering opportunities for aquatic exploration and discovery.</td>
+            </tr>
+            <tr>
+                <td>Rich Resource Deposits</td>
+                <td>With the most abundant reserves of ores and minerals, the Overworld is a prime location for mining and resource gathering.</td>
+            </tr>
+            <tr>
+                <td>Naturally Generated Structures</td>
+                <td>Villages, temples, dungeons, and other structures dot the landscape, providing valuable loot and challenges for adventurers.</td>
+            </tr>
+            <tr>
+                <td>Diverse Mob Population</td>
+                <td>From friendly animals to hostile creatures, the Overworld is home to a wide variety of mobs, each with its own behaviors and challenges.</td>
+            </tr>
+            <tr>
+                <td>Dynamic Daylight Cycle</td>
+                <td>The Overworld experiences a natural cycle of day and night, impacting visibility, mob spawning, and player activities.</td>
+            </tr>
+            <tr>
+                <td>Ever-Changing Weather Patterns</td>
+                <td>Weather conditions in the Overworld include sunshine, rain, thunderstorms, and snowfall, affecting visibility and gameplay.</td>
+            </tr>
+            <tr>
+                <td>Total Vertical Height (Blocks)</td>
+                <td>The Overworld features a total vertical height of 384 blocks, providing ample space for towering landscapes and underground exploration.</td>
+            </tr>
+        </table>
+
+        <p class="overworld_paragraph"> The Overworld is the central dimension in Minecraft, serving as the primary realm where players begin their adventures and spend the majority of their time. It is a sprawling world filled with a rich tapestry of landscapes, biomes, and wonders waiting to be discovered. </p>
+        <p class="overworld_paragraph"> As the most diverse dimension in Minecraft, the Overworld offers an unparalleled variety of environments to explore. From lush forests and rolling plains to towering mountains and expansive deserts, each biome presents its own unique challenges and opportunities for adventure. Whether you're trekking through dense jungles, braving the icy tundra, or traversing the depths of underground caverns, the Overworld is teeming with life and excitement at every turn. </p>
+        <p class="overworld_paragraph"> One of the defining features of the Overworld is its surface and underground biomes, which add depth and complexity to the world. Above ground, players can marvel at the beauty of natural landscapes, encounter wildlife, and discover hidden treasures amidst the foliage. Below ground, vast networks of caves, ravines, and mineshafts await exploration, offering valuable resources and the thrill of uncovering hidden secrets buried deep within the earth. </p>
+        <p class="overworld_paragraph"> Oceans are another prominent feature of the Overworld, covering vast expanses of the landscape and providing players with opportunities for aquatic exploration and adventure. From tranquil coral reefs teeming with marine life to treacherous deep oceans inhabited by dangerous creatures, the waters of the Overworld are as diverse and unpredictable as the land itself. </p>
+        <p class="overworld_paragraph"> In addition to its diverse biomes and landscapes, the Overworld boasts a wealth of resources and opportunities for players to thrive and survive. It is home to the most abundant reserves of ores, minerals, and materials, making it a prime location for mining and resource gathering. Naturally generated structures such as villages, temples, and dungeons dot the landscape, offering valuable loot and challenges for adventurers to conquer. </p>
+        <p class="overworld_paragraph"> The Overworld is also populated by a wide variety of creatures, from friendly animals like cows and sheep to hostile mobs like zombies, skeletons, and creepers. Players must navigate the dangers of the world while harnessing the resources and crafting skills necessary to survive and thrive in this unforgiving environment. </p>
+        <p class="overworld_paragraph"> With its dynamic daylight cycle, ever-changing weather patterns, and towering landscapes that stretch to a total vertical height of 384 blocks, the Overworld is a realm of endless possibilities and exploration. Whether you're building towering fortresses, embarking on epic quests, or simply marveling at the beauty of the world around you, the Overworld is a place where adventure awaits around every corner. </p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="nether_header">The Nether Dimension in Minecraft</h1>
+
+        <img src="dimensions_pictures/nether1.png" class="nether_img">
+        <img src="dimensions_pictures/nether2.png" class="nether_img">
+        <img src="dimensions_pictures/nether3.png" class="nether_img">
+        <img src="dimensions_pictures/nether4.png" class="nether_img">
+
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Chaotic Terrain</td>
+                <td>The Nether's landscape is characterized by its chaotic and messy terrain, consisting of jagged cliffs, twisting tunnels, and precarious ledges.</td>
+            </tr>
+            <tr>
+                <td>Huge Fungi</td>
+                <td>Giant fungi structures dot the Nether landscape, providing shelter and resources for players brave enough to explore their depths.</td>
+            </tr>
+            <tr>
+                <td>Ocean of Lava</td>
+                <td>Vast expanses of lava form oceans that stretch as far as the eye can see, posing a constant threat to players who venture too close.</td>
+            </tr>
+            <tr>
+                <td>Ceiling of Bedrock</td>
+                <td>The Nether is enclosed by a ceiling of bedrock, preventing players from escaping the dimension by building upwards.</td>
+            </tr>
+            <tr>
+                <td>Special Ores</td>
+                <td>Unique ores such as nether quartz and ancient debris can be found throughout the Nether, offering valuable resources for crafting and building.</td>
+            </tr>
+            <tr>
+                <td>Piglins and Bartering</td>
+                <td>Piglins, humanoid pig-like creatures, inhabit the Nether and can be traded with using gold ingots, offering valuable items in exchange.</td>
+            </tr>
+            <tr>
+                <td>Bastion Remnants and Nether Fortresses</td>
+                <td>Structures such as bastion remnants and Nether fortresses are scattered throughout the Nether, providing challenges and rewards for daring adventurers.</td>
+            </tr>
+            <tr>
+                <td>Increased Travel Speed</td>
+                <td>Traveling in the Nether is faster than in the Overworld, with players able to cover greater distances in less time as 1 block in the nether is equal to 8 blocks back in the overworld.</td>
+            </tr>
+            <tr>
+                <td>Charged Respawn Anchor</td>
+                <td>Using a charged respawn anchor in the Nether sets the player's spawn point, providing a respawn location upon death. However, it explodes when used in other dimensions.</td>
+            </tr>
+            <tr>
+                <td>No Water Placement</td>
+                <td>Water cannot be placed directly in the Nether without the use of a cauldron, making survival and navigation more challenging.</td>
+            </tr>
+        </table>    
+        
+        <p class="nether_paragraph"> The Nether is a perilous dimension shrouded in darkness and danger, contrasting starkly with the lush landscapes of the Overworld. Upon entering a Nether portal from the Overworld, players find themselves immersed in a realm of chaos and fire, where towering cliffs of jagged netherrack and oceans of molten lava dominate the landscape. The terrain is hostile and unforgiving, with narrow pathways twisting through the cavernous depths and precarious ledges offering scant footholds for weary travelers. Explorers must navigate the chaotic terrain with caution, as every step could lead to a deadly fall or encounter with the Nether's fearsome inhabitants. </p>
+        <p class="nether_paragraph"> Unique to the Nether are the colossal fungi structures that dot the landscape, towering over the infernal landscape like twisted monoliths. These huge fungi provide shelter and resources for players brave enough to explore their depths, offering valuable materials such as warped and crimson stems, as well as the elusive nether wart. Venturing into the depths of these fungal forests, players may encounter strange and otherworldly creatures that call the Nether home, adding to the sense of mystery and danger that permeates the dimension. </p>
+        <p class="nether_paragraph"> The Nether is defined by its vast oceans of lava, which stretch as far as the eye can see and pose a constant threat to unsuspecting travelers. The intense heat emanating from the molten rivers makes navigation perilous, forcing players to carefully plan their routes and utilize protective gear such as fire-resistant potions or enchanted armor to survive the searing temperatures. Despite the dangers, the lava-filled landscape of the Nether holds valuable resources, including unique ores such as nether quartz and ancient debris, which can be harvested and used to craft powerful weapons and armor. </p>
+        <p class="nether_paragraph"> In addition to its hostile terrain and fiery landscapes, the Nether is home to a variety of unique creatures, including the enigmatic piglins. These humanoid pig-like creatures roam the Nether's caverns and tunnels, scavenging for gold and guarding their precious hoards from intruders. Players can interact with piglins by offering them gold ingots in exchange for valuable items such as potions, enchanted gear, and even ancient debris. However, players must exercise caution, as piglins can quickly turn hostile if provoked or if their gold supply runs dry. </p>
+        <p class="nether_paragraph"> Structures such as bastion remnants and Nether fortresses are scattered throughout the Nether, offering challenges and rewards for intrepid adventurers. Bastion remnants are ancient strongholds inhabited by piglin brutes and hoglins, where players can uncover valuable loot and treasures hidden within their crumbling walls. Nether fortresses, on the other hand, are imposing structures built from nether bricks and inhabited by the fearsome wither skeletons and blazes. These fortresses are home to valuable resources such as blaze rods and nether wart, making them prime destinations for players seeking to bolster their arsenal and resources. </p>
+        <p class="nether_paragraph"> Despite its dangers, the Nether offers a realm of endless possibilities for those brave enough to explore its depths. From the thrill of uncovering ancient treasures in forgotten ruins to the pulse-pounding excitement of battling fearsome creatures in darkened corridors, the Nether is a dimension teeming with adventure and discovery. Whether you're delving into the depths of a bastion remnant or braving the fiery expanses of a lava ocean, the Nether promises excitement, challenge, and untold riches for those who dare to venture into its fiery embrace. </p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <h1 class="end_header">The End Dimension in Minecraft</h1>
+
+        <img src="dimensions_pictures/end1.png" class="end_img">
+        <img src="dimensions_pictures/end2.png" class="end_img">
+
+        <table>
+            <tr>
+                <th>Features</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Almost No Bedrock</td>
+                <td>The End is devoid of almost any bedrock, creating an environment where players must be cautious of the void beneath the floating islands.</td>
+            </tr>
+            <tr>
+                <td>Direct Access to the Void</td>
+                <td>The void lies just beneath the floating islands of the End, posing a constant threat to players who venture too close to the edge.</td>
+            </tr>
+            <tr>
+                <td>Floating Islands of End Stone</td>
+                <td>The landscape of the End consists primarily of floating islands of end stone, suspended in the void and devoid of life save for the occasional enderman.</td>
+            </tr>
+            <tr>
+                <td>End Cities</td>
+                <td>Sprawling complexes of obsidian and purpur blocks, end cities are inhabited by shulkers and contain valuable loot such as elytra and shulker boxes.</td>
+            </tr>
+            <tr>
+                <td>The Ender Dragon</td>
+                <td>The ender dragon, a powerful boss, guards the End's exit portal and must be defeated by players in order to escape the dimension and return to the Overworld.</td>
+            </tr>
+        </table>    
+
+        <p class="end_paragraph"> The End is a mysterious and otherworldly dimension, distinct from both the Overworld and the Nether. Accessible only through end portals found in strongholds scattered throughout the Overworld, the End is a desolate and barren realm characterized by its floating islands of end stone and eerie silence. Often considered the opposite of the chaotic Nether, the End offers a stark contrast with its tranquil yet foreboding atmosphere. </p>
+        <p class="end_paragraph"> Upon entering the End, players find themselves surrounded by vast expanses of empty space, with almost no bedrock to provide a sense of solidity or safety. Direct access to the void beneath the floating islands adds to the sense of unease and danger, making navigation treacherous and exploration fraught with peril. The landscape consists primarily of floating islands of end stone, suspended in the void and devoid of life save for the occasional chorus plant or enderman wandering the barren terrain. </p>
+        <p class="end_paragraph"> Despite its desolate appearance, the End is home to some of the most unique and valuable resources in the game. End cities, sprawling complexes of obsidian and purpur blocks, can be found scattered throughout the dimension, offering challenges and rewards for intrepid explorers. These cities are inhabited by shulkers, mysterious creatures that teleport and shoot projectiles at unsuspecting players. Inside end cities, players can find valuable loot such as elytra, valuable wings that grant the ability to glide through the air, and shulker boxes, versatile containers that can hold multiple stacks of items. </p>
+        <p class="end_paragraph"> One of the most iconic features of the End is its resident boss, the ender dragon. A powerful and formidable adversary, the ender dragon guards the End's exit portal and must be defeated in order for players to escape the dimension and return to the Overworld. Battling the ender dragon is a challenging and epic encounter, requiring careful planning, strategic combat tactics, and mastery of the game's mechanics. Upon defeating the ender dragon, players are rewarded with valuable experience points, access to the End's exit portal, and the opportunity to explore the dimension's hidden secrets and treasures at their leisure. </p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+    </main>
+
+    <!-- ============================================================ -->
+
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+
+    <div class="bottombar">
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="bottombar-centered-text">NOTE: Adjust the zoom setting to your liking! ^_^</div>
+    </div>
+    
+    <!-- ============================================================ -->
+
+    <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
+    <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
+    
+    <script>
+
+        var numElements = 30;
+
+        
+        var leftcontainer = document.getElementById('left-grid-container');
+    
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'left-grid-cherryleaves-block';
+            leftcontainer.appendChild(div);
+        }
+
+
+        
+        var rightcontainer = document.getElementById('right-grid-container');
+
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'right-grid-cherryleaves-block';
+            rightcontainer.appendChild(div);
+        }
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-pointing.png" class="minecraft-skin-pointing">
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-sitting-pointing.png" class="minecraft-skin-sitting-pointing">
+
+    <!-- ============================================================ -->
+
+    <nav>
+        <a href="../../Home_Webpage.html"> <img src="../../player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="../../icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="#"> <img src="../../icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="../../icons/minecraft-map-colored.png" class="icons"> </a>
+        <a href="../../other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="../../icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="../../icons/minecraft-sapling-azalea.png" class="saplings"> </a>
+        <a href="../../other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="../../icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="../../icons/minecraft-piglin-head.png" class="icons"> </a>
+        <a href="../../other_webpages/contact_webpage/Contact_Webpage.html"> <img src="../../icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="../../icons/minecraft-book-and-quill.png" class="icons"> </a> 
+        <div class="animation start-dimensions"></div>
+    </nav>
+
+    <!-- ============================================================ -->
+
+    <audio id="menu_sound" preload="auto"> <source src="../../sounds/minecraft-menu-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="swoosh_sound" preload="auto"> <source src="../../sounds/minecraft-swoosh-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="end_dimension" preload="auto"> <source src="../../sounds/minecraft-end-dimension-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="disc_otherside_cut" preload="auto"> <source src="../../sounds/minecraft-disc-otherside-cut.mp3" type="audio/mpeg"> </audio>
+    <audio id="mob_ravager_sound" preload="auto"> <source src="../../sounds/minecraft-ravager.mp3" type="audio/mpeg"> </audio>
+    <audio id="villager_sound" preload="auto"> <source src="../../sounds/minecraft-villager-sound-trading-accepted.mp3" type="audio/mpeg"> </audio>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        var sound1 = $("#menu_sound")[0];
+        $("nav a").mouseenter(function() {
+            sound1.currentTime = 0;
+            sound1.play();
+        }).mouseleave(function() {
+            sound1.pause();
+        });
+
+        var sound2 = $("#swoosh_sound")[0];
+        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title").mouseenter(function() {
+            sound2.currentTime = 0;
+            sound2.play();
+        }).mouseleave(function() {
+            sound2.pause();
+        });
+
+        var sound3 = $("#end_dimension")[0];
+        $(".dimensions_title").mouseenter(function() {
+            sound3.currentTime = 0;
+            sound3.play();
+        }).mouseleave(function() {
+            sound3.pause();
+        });
+
+        var sound4 = $("#disc_otherside_cut")[0];
+        $(".biomes_title").mouseenter(function() {
+            sound4.currentTime = 0;
+            sound4.play();
+        }).mouseleave(function() {
+            sound4.pause();
+        });
+
+        var sound5 = $("#mob_ravager_sound")[0];
+        $(".mobs_title").mouseenter(function() {
+            sound5.currentTime = 0;
+            sound5.play();
+        }).mouseleave(function() {
+            sound5.pause();
+        });
+
+        var sound6 = $("#villager_sound")[0];
+        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
+            sound6.currentTime = 0;
+            sound6.play();
+        }).mouseleave(function() {
+            sound6.pause();
+        });
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        $(document).ready(function() {
+            // Function to add enlarged class to images
+            function enlargeImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").addClass("enlarged");
+            }
+
+            // Function to remove enlarged class from images
+            function resetImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").removeClass("enlarged");
+            }
+
+            // Event listeners to trigger image enlargement on hover over text
+            $(".aboutme_title").hover(enlargeImages, resetImages);
+            $(".username").hover(enlargeImages, resetImages);
+        });
+    </script>   
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        function createLeafAtMouse(event) {
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leafSounds = [
+                '../../leaves_sounds/1.MP3',
+                '../../leaves_sounds/2.MP3',
+                '../../leaves_sounds/3.MP3',
+                '../../leaves_sounds/4.MP3',
+                '../../leaves_sounds/5.MP3',
+                '../../leaves_sounds/6.MP3',
+                '../../leaves_sounds/7.MP3',
+                '../../leaves_sounds/8.MP3',
+                '../../leaves_sounds/9.MP3',
+                '../../leaves_sounds/10.MP3',
+                '../../leaves_sounds/11.MP3',
+                '../../leaves_sounds/12.MP3',
+                '../../leaves_sounds/13.MP3',
+                '../../leaves_sounds/14.MP3'
+            ];
+
+            // Check if the clicked element is an nth-child of the left container
+            const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
+            if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Check if the clicked element is an nth-child of the right container
+            const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
+            if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Proceed with creating a leaf
+            var Xposition = event.clientX - 10;
+            var Yposition = event.clientY + 80;
+
+            // Create the leaf element
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Xposition + 'px';
+            leaf.style.top = Yposition + 'px';
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360;
+            const sway = Math.random() * 160 - 80;
+            const animationDuration = Math.random() * 4 + 8;
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            // Play a random sound
+            const randomSoundIndex = Math.floor(Math.random() * leafSounds.length);
+            const audio = new Audio(leafSounds[randomSoundIndex]);
+            audio.play();
+            
+            // Remove the event listener once a leaf is created at this position
+            event.target.removeEventListener('click', createLeafAtMouse);
+        }
+
+        var leftGridItems = document.querySelectorAll('.left-grid-cherryleaves-block');
+        var rightGridItems = document.querySelectorAll('.right-grid-cherryleaves-block');
+
+        leftGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+
+        rightGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+    
+    </script>
+
+</body>
+
+</html>

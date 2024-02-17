@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- ============================================================ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Webpage | Saligan's Website</title>
+    <link rel="shortcut icon" type="x-icon" href="../../icons/minecraft-book-and-quill.png">
+    <link rel="stylesheet" href="Contact_Webpage.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        // Define arrays of image URLs
+        const firstImages = [
+            '../../clouds_background/1.png',
+            '../../clouds_background/2.png',
+        ];
+    
+        const secondImages = [
+            '../../clouds_background/3.png',
+            '../../clouds_background/4.png',
+        ];
+    
+        // Function to switch background image
+        function switchBackground(imagesArray) {
+            let currentIndex = 0;
+            return setInterval(() => {
+                document.body.style.backgroundImage = `url(${imagesArray[currentIndex]})`;
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+            }, 2000); // 1000 = 1 sec
+        }
+    
+        // Function to switch between two sets of images and loop
+        function switchBetweenSets() {
+            let isFirstSet = true;
+            let currentInterval;
+            if (isFirstSet) {
+                currentInterval = switchBackground(firstImages);
+            } else {
+                currentInterval = switchBackground(secondImages);
+            }
+            setInterval(() => {
+                if (isFirstSet) {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(secondImages);
+                } else {
+                    clearInterval(currentInterval); // Clear previous interval
+                    currentInterval = switchBackground(firstImages);
+                }
+                isFirstSet = !isFirstSet; // Toggle between sets
+            }, 30000); // 1000 = 1 sec
+        }
+    
+        // Start switching between sets immediately and then switch after 20 seconds
+        switchBetweenSets();
+        setTimeout(() => {
+            switchBetweenSets();
+        }, 20000); // 1000 = 1 sec
+    </script>
+
+    <!-- ============================================================ -->
+
+</head>
+
+<!-- ============================================================ -->
+
+<body>
+
+    <!-- ============================================================ -->
+
+    <script>
+    
+        function createLeaf() {
+
+            const maxLeaves = 30;
+            const currentLeaves = document.querySelectorAll('.leaf').length;
+            
+            if (currentLeaves >= maxLeaves) {
+                return;
+            }
+
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * window.innerWidth + 'px';
+            leaf.style.top = 0 + 'px'; // Adjusted top position to start above the viewport
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360; // Random rotation between 0 to 360 degrees
+            const sway = Math.random() * 160 - 80; 
+            const animationDuration = Math.random() * 4 + 8; // Random duration between 8 to 12 seconds
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            // Randomly select between two different fall animations
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+        }
+    
+        setInterval(createLeaf,2000); // Create a new leaf every (1000 = 1 sec)
+    
+    </script>
+
+    <!-- ============================================================ -->
+
+    <main>
+
+        <!-- ============================================================ -->
+
+        <div class="coverpage-container">
+            <img src="../../titles/minecraft-title.png" class="minecraft_title">
+            <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"> <img src="../../titles/minecraft-playnow.png" class="minecraft_playnow"> </a>
+            <img src="../../coverpage/minecraft-cherry-grove.png" class="minecraft_coverpage">
+        </div>
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/gmail_icon.png" class="gmail_icon"> AdDU Email <img src="contact_icons/gmail_icon.png" class="gmail_icon"> <br> </span> kirapsaligan@addu.edu.ph </p>
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/gmail_icon.png" class="gmail_icon"> Personal Email <img src="contact_icons/gmail_icon.png" class="gmail_icon"> <br> </span> lpsaligan@gmail.com </p>
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/facebook_icon.png" class="facebook_icon"> Facebook Profile <img src="contact_icons/facebook_icon.png" class="facebook_icon"> <br> </span> <a href='https://www.facebook.com/KirbyPlayzPE/' class="facebook_link"> https://www.facebook.com/KirbyPlayzPE/ </a> </p>
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/phone_icon.png" class="phone_icon"> Contact Number <img src="contact_icons/phone_icon.png" class="phone_icon"> <br> </span> 0970-252-5407 </p>
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/twospeechbubbles_icon.png" class="speechbubbles_icon"> Preferred Contact Method <img src="contact_icons/twospeechbubbles_icon.png" class="speechbubbles_icon"> <br> </span> Texting through my Contact No. </p>
+        <p class="contact_paragraph"> <span class="contact_label"> <img src="contact_icons/Clock_JE3_BE3.png" class="clock_icon"> Availability <img src="contact_icons/Clock_JE3_BE3.png" class="clock_icon"> <br> </span> 9:00 AM - 9:00 PM </p>
+        
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+        <a href="#"> <img src="../../titles/minecraft-title-about-me.png" class="aboutme_title"> </a>
+        
+        <p> Greetings fellow Minecraft enthusiasts! Welcome to my Minecraft website! My username is <span class="username">KirbyPlayzJava</span>, an enthusiastic Minecraft player dedicated to unraveling the wonders of this captivating sandbox universe. I'm thrilled to welcome you to my corner of the internet dedicated to all things Minecraft. As a lifelong gamer and explorer at heart, I've spent countless hours traversing the vast landscapes and uncovering the mysteries that lie within Minecraft's pixelated realms.</p>
+        <p> Ever since I was a young player in elementary school, Minecraft has been a constant companion on my journey through the digital realm. From the humble beginnings of building dirt huts and dodging creepers, to mastering the intricacies of redstone engineering and conquering the Ender Dragon, my love for Minecraft has only grown stronger with each passing year.</p>
+        <p> As a student of <span class="subjectname">"Applications Development and Emerging Technologies"</span>, I saw an opportunity to combine my passion for Minecraft with the skills and knowledge I've acquired in the classroom. Thus, this website was born—a platform where players, both seasoned veterans and newcomers alike, can find guidance, inspiration, and a sense of community in their Minecraft adventures.</p>
+        <p> With a focus on three core aspects of the game—dimensions, biomes, and mobs—my goal is to provide comprehensive insights and resources that empower players to explore, create, and thrive in the vast and dynamic world of Minecraft. While I may have learned almost everything there is to know about Minecraft through years of gameplay, I remain eager to share my knowledge and experiences with others, and to continue learning and growing alongside the ever-evolving landscape of the game.</p>
+        <p> Through my website, I aim to share my passion for Minecraft and provide fellow players with valuable insights, tips, and inspiration to enhance their gaming experience. Whether you're seeking advice on building the ultimate fortress, mastering the art of redstone engineering, or simply embarking on epic adventures with friends, I'm here to guide you every step of the way.</p>
+        <p> Whether you're seeking tips for surviving the treacherous depths of the Nether, inspiration for building your dream home in a lush biome, or strategies for facing off against the formidable mobs that roam the land, you'll find a wealth of information and resources here to support you on your Minecraft journey. So grab your pickaxe, sharpen your sword, and let's embark on an adventure together through the endless possibilities of Minecraft!</p>
+        
+
+        <!-- ============================================================ -->
+
+        <div class="linebreaker"></div>
+        
+        <!-- ============================================================ -->
+
+    </main>
+
+    <!-- ============================================================ -->
+
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+
+    <div class="bottombar">
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="bottombar-centered-text">NOTE: Adjust the zoom setting to your liking! ^_^</div>
+    </div>
+    
+    <!-- ============================================================ -->
+
+    <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
+    <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
+    
+    <script>
+
+        var numElements = 30;
+
+        
+        var leftcontainer = document.getElementById('left-grid-container');
+    
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'left-grid-cherryleaves-block';
+            leftcontainer.appendChild(div);
+        }
+
+
+        
+        var rightcontainer = document.getElementById('right-grid-container');
+
+        for (var i = 0; i < numElements; i++) {
+            var div = document.createElement('div');
+            div.className = 'right-grid-cherryleaves-block';
+            rightcontainer.appendChild(div);
+        }
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-pointing.png" class="minecraft-skin-pointing">
+    <img src="../../player_model/minecraft-kirbyplayzjava-skin-sitting-pointing.png" class="minecraft-skin-sitting-pointing">
+
+    <!-- ============================================================ -->
+
+    <nav>
+        <a href="../../Home_Webpage.html"> <img src="../../player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="../../icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="../../other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="../../icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="../../icons/minecraft-map-colored.png" class="icons"> </a>
+        <a href="../../other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="../../icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="../../icons/minecraft-sapling-azalea.png" class="saplings"> </a>
+        <a href="../../other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="../../icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="../../icons/minecraft-piglin-head.png" class="icons"> </a>
+        <a href="#"> <img src="../../icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="../../icons/minecraft-book-and-quill.png" class="icons"> </a> 
+        <div class="animation start-contact"></div>
+    </nav>
+
+    <!-- ============================================================ -->
+
+    <audio id="menu_sound" preload="auto"> <source src="../../sounds/minecraft-menu-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="swoosh_sound" preload="auto"> <source src="../../sounds/minecraft-swoosh-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="end_dimension" preload="auto"> <source src="../../sounds/minecraft-end-dimension-sound.mp3" type="audio/mpeg"> </audio>
+    <audio id="disc_otherside_cut" preload="auto"> <source src="../../sounds/minecraft-disc-otherside-cut.mp3" type="audio/mpeg"> </audio>
+    <audio id="mob_ravager_sound" preload="auto"> <source src="../../sounds/minecraft-ravager.mp3" type="audio/mpeg"> </audio>
+    <audio id="villager_sound" preload="auto"> <source src="../../sounds/minecraft-villager-sound-trading-accepted.mp3" type="audio/mpeg"> </audio>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        var sound1 = $("#menu_sound")[0];
+        $("nav a").mouseenter(function() {
+            sound1.currentTime = 0;
+            sound1.play();
+        }).mouseleave(function() {
+            sound1.pause();
+        });
+
+        var sound2 = $("#swoosh_sound")[0];
+        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title").mouseenter(function() {
+            sound2.currentTime = 0;
+            sound2.play();
+        }).mouseleave(function() {
+            sound2.pause();
+        });
+
+        var sound3 = $("#end_dimension")[0];
+        $(".dimensions_title").mouseenter(function() {
+            sound3.currentTime = 0;
+            sound3.play();
+        }).mouseleave(function() {
+            sound3.pause();
+        });
+
+        var sound4 = $("#disc_otherside_cut")[0];
+        $(".biomes_title").mouseenter(function() {
+            sound4.currentTime = 0;
+            sound4.play();
+        }).mouseleave(function() {
+            sound4.pause();
+        });
+
+        var sound5 = $("#mob_ravager_sound")[0];
+        $(".mobs_title").mouseenter(function() {
+            sound5.currentTime = 0;
+            sound5.play();
+        }).mouseleave(function() {
+            sound5.pause();
+        });
+
+        var sound6 = $("#villager_sound")[0];
+        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
+            sound6.currentTime = 0;
+            sound6.play();
+        }).mouseleave(function() {
+            sound6.pause();
+        });
+
+    </script>
+
+    <!-- ============================================================ -->
+
+    <script>
+        $(document).ready(function() {
+            // Function to add enlarged class to images
+            function enlargeImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").addClass("enlarged");
+            }
+
+            // Function to remove enlarged class from images
+            function resetImages() {
+                $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").removeClass("enlarged");
+            }
+
+            // Event listeners to trigger image enlargement on hover over text
+            $(".aboutme_title").hover(enlargeImages, resetImages);
+            $(".username").hover(enlargeImages, resetImages);
+        });
+    </script>   
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        function createLeafAtMouse(event) {
+            const leafImages = [
+                '../../leaves/minecraft-pink-petals-2D-1.png',
+                '../../leaves/minecraft-pink-petals-2D-2.png',
+                '../../leaves/minecraft-pink-petals-2D-3.png',
+                '../../leaves/minecraft-pink-petals-2D-4.png',
+                '../../leaves/minecraft-pink-petals-2D-5.png',
+                '../../leaves/minecraft-pink-petals-2D-6.png'
+            ];
+
+            const leafSounds = [
+                '../../leaves_sounds/1.MP3',
+                '../../leaves_sounds/2.MP3',
+                '../../leaves_sounds/3.MP3',
+                '../../leaves_sounds/4.MP3',
+                '../../leaves_sounds/5.MP3',
+                '../../leaves_sounds/6.MP3',
+                '../../leaves_sounds/7.MP3',
+                '../../leaves_sounds/8.MP3',
+                '../../leaves_sounds/9.MP3',
+                '../../leaves_sounds/10.MP3',
+                '../../leaves_sounds/11.MP3',
+                '../../leaves_sounds/12.MP3',
+                '../../leaves_sounds/13.MP3',
+                '../../leaves_sounds/14.MP3'
+            ];
+
+            // Check if the clicked element is an nth-child of the left container
+            const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
+            if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Check if the clicked element is an nth-child of the right container
+            const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
+            if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
+                // Play a sound indicating the block is suitable
+                const suitableSound = new Audio('suitable-sound.mp3');
+                suitableSound.play();
+                return; // Do not proceed further
+            }
+
+            // Proceed with creating a leaf
+            var Xposition = event.clientX - 10;
+            var Yposition = event.clientY + 80;
+
+            // Create the leaf element
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Xposition + 'px';
+            leaf.style.top = Yposition + 'px';
+            document.body.appendChild(leaf);
+            const rotation = Math.random() * 360;
+            const sway = Math.random() * 160 - 80;
+            const animationDuration = Math.random() * 4 + 8;
+            const randomImageIndex = Math.floor(Math.random() * leafImages.length);
+            leaf.style.backgroundImage = `url(${leafImages[randomImageIndex]})`;
+            leaf.style.transform = `rotate(${rotation}deg) translateX(${sway}px)`;
+
+            const fallAnimation = Math.random() < 0.5 ? 'fall_clockwise' : 'fall_counterclockwise';
+            leaf.style.animation = `${fallAnimation} ${animationDuration}s linear infinite`;
+
+            // Play a random sound
+            const randomSoundIndex = Math.floor(Math.random() * leafSounds.length);
+            const audio = new Audio(leafSounds[randomSoundIndex]);
+            audio.play();
+            
+            // Remove the event listener once a leaf is created at this position
+            event.target.removeEventListener('click', createLeafAtMouse);
+        }
+
+        var leftGridItems = document.querySelectorAll('.left-grid-cherryleaves-block');
+        var rightGridItems = document.querySelectorAll('.right-grid-cherryleaves-block');
+
+        leftGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+
+        rightGridItems.forEach(function(item) {
+            item.addEventListener('click', function(event) {
+                createLeafAtMouse(event); // Call createLeafAtMouse only when a grid item is clicked
+            });
+        });
+    
+    </script>
+
+</body>
+
+</html>
