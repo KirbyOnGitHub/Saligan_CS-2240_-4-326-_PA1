@@ -48,7 +48,7 @@ main{
 
 /*============================================================*/
 
-.coverpage-container {
+.video-container {
     top: 0px;
     position: relative;
     width: fit-content; 
@@ -57,7 +57,7 @@ main{
     margin: auto;
 }
 
-.minecraft_coverpage{
+.homepage_video{
     top: 0px;
     height: 100%;
     width: 95%;
