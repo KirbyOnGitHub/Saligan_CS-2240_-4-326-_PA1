@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Dimensions Webpage | Saligan's Website</title>
-    <link rel="shortcut icon" type="x-icon" href="../../player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png">
+    <link rel="shortcut icon" type="x-icon" href="../../icons/minecraft-end-portal-frame-filled.png">
     <link rel="stylesheet" href="Dimensions_Webpage.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -147,16 +147,18 @@
         
         <!-- ============================================================ -->
 
-        <h1 class="overworld_header">The Overworld Dimension in Minecraft</h1>
+        <img src="dimensions_titles/overworld.png" class="overworld_title">
 
-        <img src="dimensions_pictures/overworld1.png" class="overworld_img">
-        <img src="dimensions_pictures/overworld2.png" class="overworld_img">
-        <img src="dimensions_pictures/overworld3.png" class="overworld_img">
-        <img src="dimensions_pictures/overworld4.png" class="overworld_img">
-        <img src="dimensions_pictures/overworld5.png" class="overworld_img">
-        <img src="dimensions_pictures/overworld6.png" class="overworld_img">
+        <div class="flex-container">
+            <img src="dimensions_imgs/overworld1.png" class="overworld_img">
+            <img src="dimensions_imgs/overworld2.png" class="overworld_img">
+            <img src="dimensions_imgs/overworld3.png" class="overworld_img">
+            <img src="dimensions_imgs/overworld4.png" class="overworld_img">
+            <img src="dimensions_imgs/overworld5.png" class="overworld_img">
+            <img src="dimensions_imgs/overworld6.png" class="overworld_img">
+        </div>
 
-        <table>
+        <table class="overworld_table">
             <tr>
                 <th>Features</th>
                 <th>Description</th>
@@ -213,14 +215,16 @@
         
         <!-- ============================================================ -->
 
-        <h1 class="nether_header">The Nether Dimension in Minecraft</h1>
+        <img src="dimensions_titles/nether.png" class="nether_title">
 
-        <img src="dimensions_pictures/nether1.png" class="nether_img">
-        <img src="dimensions_pictures/nether2.png" class="nether_img">
-        <img src="dimensions_pictures/nether3.png" class="nether_img">
-        <img src="dimensions_pictures/nether4.png" class="nether_img">
+        <div class="flex-container">
+            <img src="dimensions_imgs/nether1.png" class="nether_img">
+            <img src="dimensions_imgs/nether2.png" class="nether_img">
+            <img src="dimensions_imgs/nether3.png" class="nether_img">
+            <img src="dimensions_imgs/nether4.png" class="nether_img">
+        </div>
 
-        <table>
+        <table class="nether_table">
             <tr>
                 <th>Features</th>
                 <th>Description</th>
@@ -280,12 +284,16 @@
         
         <!-- ============================================================ -->
 
-        <h1 class="end_header">The End Dimension in Minecraft</h1>
+        <img src="dimensions_titles/end.png" class="end_title">
 
-        <img src="dimensions_pictures/end1.png" class="end_img">
-        <img src="dimensions_pictures/end2.png" class="end_img">
+        <div class="flex-container">
+            <img src="dimensions_imgs/end1.png" class="end_img">
+            <img src="dimensions_imgs/end2.png" class="end_img">
+            <img src="dimensions_imgs/end3.png" class="end_img">
+            <img src="dimensions_imgs/end4.png" class="end_img">
+        </div>
 
-        <table>
+        <table class="end_table">
             <tr>
                 <th>Features</th>
                 <th>Description</th>
@@ -405,7 +413,7 @@
         });
 
         var sound2 = $("#swoosh_sound")[0];
-        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title").mouseenter(function() {
+        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title, .overworld_title, .nether_title, .end_title").mouseenter(function() {
             sound2.currentTime = 0;
             sound2.play();
         }).mouseleave(function() {

@@ -94,7 +94,6 @@ main{
 /*============================================================*/
 
 p{
-    z-index: 1;
     position: relative;
     text-align: justify;
     color: rgb(190, 188, 188);
@@ -105,7 +104,7 @@ p{
     margin-left: 15%;
     margin-right: 15%;
     padding: 1.5rem;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
 }
 
@@ -174,7 +173,7 @@ p.dimensions_paragraph{
     margin-left: 15%;
     margin-right: 15%;
     padding: 1.5rem;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
 }
 
@@ -222,7 +221,7 @@ p.biomes_paragraph{
     margin-left: 15%;
     margin-right: 15%;
     padding: 1.5rem;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
 }
 
@@ -258,6 +257,8 @@ p.biomes_paragraph{
     height: 100%;
 }
 
+/*============================================================*/
+
 p.mobs_paragraph{
     z-index: 1;
     position: relative;
@@ -270,7 +271,7 @@ p.mobs_paragraph{
     margin-left: 15%;
     margin-right: 15%;
     padding: 1.5rem;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
 }
 
