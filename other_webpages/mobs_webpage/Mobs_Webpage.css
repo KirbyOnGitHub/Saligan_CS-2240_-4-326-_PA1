@@ -60,8 +60,8 @@ main{
 .homepage_video{
     top: 0px;
     height: 100%;
-    width: 95%;
-    border: 10px solid black;
+    width: 100%;
+    border-bottom: 10px solid black;
     margin: auto;
     display: block;
     margin-top: 20px;;
@@ -70,32 +70,33 @@ main{
 
 .minecraft_title {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; 
+    z-index: 1;
+    width: 35%; /* Adjust this value as needed */
+    max-width: 700px; /* Limit the maximum width */
 }
 
 .minecraft_playnow {
     position: absolute;
-    top: 50%; 
+    top: 45%;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 1; 
-    width: 350px;
-    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 20%; /* Adjust this value as needed */
+    max-width: 400px; /* Limit the maximum width */
     transition: width 0.3s ease;
 }
 
 .minecraft_playnow:hover {
-    width: 400px; 
+    width: 35%; /* Adjust the hover width */
 }
 
 /*============================================================*/
 
 p{
     position: relative;
-    text-align: justify;
     color: rgb(190, 188, 188);
     background-color: #213144;
     border: 5px solid #131c28;
@@ -319,19 +320,15 @@ p{
 
 .left-grid-cherryleaves-block:nth-child(1),
 .left-grid-cherryleaves-block:nth-child(2),
-.left-grid-cherryleaves-block:nth-child(3),
 .left-grid-cherryleaves-block:nth-child(5),
 .left-grid-cherryleaves-block:nth-child(6),
 .left-grid-cherryleaves-block:nth-child(7),
-.left-grid-cherryleaves-block:nth-child(8),
 .left-grid-cherryleaves-block:nth-child(9),
 .left-grid-cherryleaves-block:nth-child(10),
 .left-grid-cherryleaves-block:nth-child(11),
-.left-grid-cherryleaves-block:nth-child(12),
 .left-grid-cherryleaves-block:nth-child(13),
 .left-grid-cherryleaves-block:nth-child(14),
 .left-grid-cherryleaves-block:nth-child(15),
-.left-grid-cherryleaves-block:nth-child(16),
 .left-grid-cherryleaves-block:nth-child(17),
 .left-grid-cherryleaves-block:nth-child(18),
 .left-grid-cherryleaves-block:nth-child(19),
@@ -372,22 +369,17 @@ p{
     background-size: 76.8px;
 }
 
-.right-grid-cherryleaves-block:nth-child(2),
 .right-grid-cherryleaves-block:nth-child(3),
 .right-grid-cherryleaves-block:nth-child(4),
-.right-grid-cherryleaves-block:nth-child(5),
 .right-grid-cherryleaves-block:nth-child(6),
 .right-grid-cherryleaves-block:nth-child(7),
 .right-grid-cherryleaves-block:nth-child(8),
-.right-grid-cherryleaves-block:nth-child(9),
 .right-grid-cherryleaves-block:nth-child(10),
 .right-grid-cherryleaves-block:nth-child(11),
 .right-grid-cherryleaves-block:nth-child(12),
-.right-grid-cherryleaves-block:nth-child(13),
 .right-grid-cherryleaves-block:nth-child(14),
 .right-grid-cherryleaves-block:nth-child(15),
 .right-grid-cherryleaves-block:nth-child(16),
-.right-grid-cherryleaves-block:nth-child(17),
 .right-grid-cherryleaves-block:nth-child(19),
 .right-grid-cherryleaves-block:nth-child(20),
 .right-grid-cherryleaves-block:nth-child(23),
@@ -754,7 +746,6 @@ th:nth-child(1){
 td:nth-child(2){
     font-size: 80%;
     line-height: 30px;
-    text-align: justify;
 }
 
 th {
