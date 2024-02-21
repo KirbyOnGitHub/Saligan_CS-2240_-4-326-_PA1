@@ -1,8 +1,8 @@
 
 .leaf {
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 22.5px;
+    height: 22.5px;
     z-index: 0;
     background-size: cover;
 }
@@ -53,16 +53,13 @@ main{
     position: relative;
     width: fit-content; 
     width: 100%;
-    margin-top: 0px;
-    margin: auto;
 }
 
 .homepage_video{
+    overflow: hidden;
     top: 0px;
     height: 100%;
     width: 100%;
-    border-bottom: 10px solid black;
-    margin: auto;
     display: block;
     margin-top: 20px;;
     margin-bottom: 5%;
@@ -74,8 +71,7 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 35%; /* Adjust this value as needed */
-    max-width: 700px; /* Limit the maximum width */
+    width: 35%; 
 }
 
 .minecraft_playnow {
@@ -84,13 +80,12 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 20%; /* Adjust this value as needed */
-    max-width: 400px; /* Limit the maximum width */
-    transition: width 0.3s ease;
+    width: 15%; 
+    transition: width 0.5s ease;
 }
 
 .minecraft_playnow:hover {
-    width: 35%; /* Adjust the hover width */
+    width: 20%; 
 }
 
 /*============================================================*/
@@ -98,15 +93,16 @@ main{
 p{
     position: relative;
     color: rgb(190, 188, 188);
-    background-color: #213144;
-    border: 5px solid #131c28;
+    background-image: repeating-linear-gradient(to right, #213145, #3d5779, #263f60);
+    border: 3px solid #131c28;
     border-radius: 5px;
     margin-top: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
+    overflow: hidden;
 }
 
 .username{
@@ -121,30 +117,30 @@ p{
 
 .linebreaker{
     background-image: url('textures/minecraft-bamboo-customplanks.png');
-    background-size: 78.4px;
+    background-size: 58.8px;
     border: 2px solid #8da781;
     margin-top: 5%;
     margin-left: 12%;
     margin-right: 12%;
     margin-bottom: 5%;
-    height:20px;
+    height: 15px;
 }
 
 /*============================================================*/
 
 .dimensions_title {
     height: 100%;
-    width: 20%;
+    width: 30%;
     background-image: repeating-linear-gradient(to right, #c62e7a, #db66a0, #af3087);
-    border: 5px solid #6d0d3f;
+    border: 3px solid #6d0d3f;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease; 
 }
 
 .dimensions_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2);
 }
 
@@ -163,18 +159,16 @@ p{
 }
 
 p.dimensions_paragraph{
-    z-index: 1;
     position: relative;
-    text-align: justify;
     color: rgb(76, 6, 62);
     background-image: repeating-linear-gradient(to right, #c13e7f, #db66a0, #c13e7f);
-    border: 5px solid #6d0d3f;
+    border: 3px solid #6d0d3f;
     border-radius: 5px;
     margin-top: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
 }
 
@@ -182,17 +176,17 @@ p.dimensions_paragraph{
 
 .biomes_title {
     height: 100%;
-    width: 20%;
+    width: 30%;
     background-image: repeating-linear-gradient(to right, #66bcd9, #36a4cf, #8ba9e4);
-    border: 5px solid #054607;
+    border: 3px solid #054607;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
 }
 
 .biomes_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2);
 }
 
@@ -211,18 +205,16 @@ p.dimensions_paragraph{
 }
 
 p.biomes_paragraph{
-    z-index: 1;
     position: relative;
-    text-align: justify;
     color: rgb(9, 44, 75);
     background-image: repeating-linear-gradient(to right, #66bcd9, #36a4cf, #8ba9e4);
-    border: 5px solid #054607;
+    border: 3px solid #054607;
     border-radius: 5px;
     margin-top: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
 }
 
@@ -230,17 +222,17 @@ p.biomes_paragraph{
 
 .mobs_title {
     height: 100%;
-    width: 20%;
+    width: 30%;
     background-image: repeating-linear-gradient(to right, #efb028, #edaf45, #eca415);
-    border: 5px solid #e44a02;
+    border: 3px solid #e44a02;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
 }
 
 .mobs_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2); 
 }
 
@@ -261,19 +253,18 @@ p.biomes_paragraph{
 /*============================================================*/
 
 p.mobs_paragraph{
-    z-index: 1;
     position: relative;
-    text-align: justify;
     color: rgb(139, 60, 12);
     background-image: repeating-linear-gradient(to right, #efb028, #edaf45, #eca415);
-    border: 5px solid #e44a02;
+    border: 3px solid #e44a02;
     border-radius: 5px;
     margin-top: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
+    overflow: hidden; 
 }
 
 /*============================================================*/
@@ -281,9 +272,12 @@ p.mobs_paragraph{
 .aboutme_title {
     height: 100%;
     width: 35%;
+    background-image: repeating-linear-gradient(to right, #213145, #3d5779, #263f60);
+    border: 3px solid #131c28;
+    border-radius: 5px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
-    padding: 1rem;
-    margin-bottom: 45px;
 }
 
 .aboutme_title:hover {
@@ -311,9 +305,9 @@ p.mobs_paragraph{
     position: fixed;
     left: 0;
     top: 0;
-    width: 77px;
+    width: 57.75px;
     height: 100%;
-    background-size: 76.8px;
+    background-size: 57.6px;
     background-image: url('textures/minecraft-cherry-log-side.png'); 
 }
 
@@ -321,23 +315,23 @@ p.mobs_paragraph{
     position: fixed;
     right: 0;
     top: 0;
-    width: 77px;
+    width: 57.75px;
     height: 100%;
-    background-size: 76.8px;
+    background-size: 57.6px;
     background-image: url('textures/minecraft-cherry-log-side.png'); 
 }
 
 .bottombar{
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 77px;
-    background-size: 76.8px;
+    height: 57.75px;
+    background-size: 57.6px;
     background-image: url('textures/minecraft-moss.png'); 
-    border-top: 5px solid #265e37;
+    border-top: 3px solid #265e37;
     display: grid;
     grid-template-columns: repeat(27, 1fr); 
     grid-template-rows: auto;
@@ -354,11 +348,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(25)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 50%;
+    top: -74px;
+    left: 30%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-1.png');
     background-size: cover;
 }
@@ -369,11 +363,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(22)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 50%;
+    top: -74px;
+    left: 70%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-3.png');
     background-size: cover;
 }
@@ -386,11 +380,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(26)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 85%;
+    top: -74px;
+    left: 40%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-4.png');
     background-size: cover;
 }
@@ -400,11 +394,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(17)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 85%;
+    top: -74px;
+    left: 80%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-2.png');
     background-size: cover;
 }
@@ -416,11 +410,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(24)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 90%;
+    top: -74px;
+    left: 60%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-5.png');
     background-size: cover;
 }
@@ -431,11 +425,11 @@ p.mobs_paragraph{
 .bottombar span:nth-child(27)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 90%;
+    top: -74px;
+    left: 20%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('leaves/minecraft-pink-petals-2D-6.png');
     background-size: cover;
 }
@@ -444,37 +438,41 @@ p.mobs_paragraph{
     grid-column: 1 / span 27;
     grid-row: 1; 
     text-align: center;
-    line-height: 77px;
+    line-height: 57.75px;
     color:white;
+    font-size: 12px;
 }
 
 /*============================================================*/
 
 .left-grid-container-cherryleaves {
     display: grid;
-    grid-template-columns: repeat(4, 77px); 
-    grid-template-rows: repeat(7, 77px); 
+    grid-template-columns: repeat(4, 57.75px); 
+    grid-template-rows: repeat(7, 57.75px); 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
 }
 
 .left-grid-cherryleaves-block{
-    background-size: 76.8px;
+    background-size: 57.6px;
 }
 
 .left-grid-cherryleaves-block:nth-child(1),
 .left-grid-cherryleaves-block:nth-child(2),
+.left-grid-cherryleaves-block:nth-child(3),
 .left-grid-cherryleaves-block:nth-child(5),
 .left-grid-cherryleaves-block:nth-child(6),
 .left-grid-cherryleaves-block:nth-child(7),
+.left-grid-cherryleaves-block:nth-child(8),
 .left-grid-cherryleaves-block:nth-child(9),
 .left-grid-cherryleaves-block:nth-child(10),
 .left-grid-cherryleaves-block:nth-child(11),
+.left-grid-cherryleaves-block:nth-child(12),
 .left-grid-cherryleaves-block:nth-child(13),
 .left-grid-cherryleaves-block:nth-child(14),
 .left-grid-cherryleaves-block:nth-child(15),
+.left-grid-cherryleaves-block:nth-child(16),
 .left-grid-cherryleaves-block:nth-child(17),
 .left-grid-cherryleaves-block:nth-child(18),
 .left-grid-cherryleaves-block:nth-child(19),
@@ -503,29 +501,33 @@ p.mobs_paragraph{
 
 .right-grid-container-cherryleaves {
     display: grid;
-    grid-template-columns: repeat(4, 77px); 
-    grid-template-rows: repeat(7, 77px); 
+    grid-template-columns: repeat(4, 57.75px); 
+    grid-template-rows: repeat(7, 57.75px); 
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
 }
 
 .right-grid-cherryleaves-block{
-    background-size: 76.8px;
+    background-size: 57.6px;
 }
 
+.right-grid-cherryleaves-block:nth-child(2),
 .right-grid-cherryleaves-block:nth-child(3),
 .right-grid-cherryleaves-block:nth-child(4),
+.right-grid-cherryleaves-block:nth-child(5),
 .right-grid-cherryleaves-block:nth-child(6),
 .right-grid-cherryleaves-block:nth-child(7),
 .right-grid-cherryleaves-block:nth-child(8),
+.right-grid-cherryleaves-block:nth-child(9),
 .right-grid-cherryleaves-block:nth-child(10),
 .right-grid-cherryleaves-block:nth-child(11),
 .right-grid-cherryleaves-block:nth-child(12),
+.right-grid-cherryleaves-block:nth-child(13),
 .right-grid-cherryleaves-block:nth-child(14),
 .right-grid-cherryleaves-block:nth-child(15),
 .right-grid-cherryleaves-block:nth-child(16),
+.right-grid-cherryleaves-block:nth-child(17),
 .right-grid-cherryleaves-block:nth-child(19),
 .right-grid-cherryleaves-block:nth-child(20),
 .right-grid-cherryleaves-block:nth-child(23),
@@ -551,35 +553,33 @@ p.mobs_paragraph{
 /*============================================================*/
 
 .minecraft-skin-pointing {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     height: auto;
-    margin: -20px;
-    right: -45px;
-    bottom: 60px;
-    width: 300px;
+    right: -35px;
+    bottom: 35px;
+    width: 180px;
     pointer-events: auto;
     transition: all 0.3s ease; 
 }
 
 .minecraft-skin-pointing:hover {
-    width: 320px;
+    width: 200px;
 }
 
 .minecraft-skin-sitting-pointing {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     height: auto;
-    margin: -20px;
-    left: -45px;
-    bottom: -10px;
-    width: 300px;
+    left: -35px;
+    bottom: -5px;
+    width: 180px;
     pointer-events: auto;
     transition: all 0.3s ease; 
 }
 
 .minecraft-skin-sitting-pointing:hover {
-    width: 320px;
+    width: 200px;
 }
 
 .minecraft-skin-pointing.enlarged,
@@ -588,161 +588,213 @@ p.mobs_paragraph{
 }
 
 @keyframes enlargeAnimation {
-    0% { width: 300px; }
-    100% { width: 330px; }
+    0% { width: 180px; }
+    100% { width: 220px; }
 }
 
 /*============================================================*/
 
 nav {
-    font-family: 'Monocraft', sans-serif;
+    font-family: 'Monocraft';
+    src: url(custom_fonts/Monocraft.ttf);
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; /* Adjust as needed for responsiveness */
-    max-width: 922px;
-    height: 77px;
+    width: 691.5px;
+    height: 57.75px;
     background-image: url('textures/minecraft-redstone-lamp-off-redstone.png');
-    background-size: 76.8px;
-    font-size: 0;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
-    z-index: 1000;
+    background-size: 57.6px;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav a {
-    font-size: 1rem; /* Reset font size */
+    font-size: 12.75px;
     font-weight: bold;
     text-transform: uppercase;
     -webkit-text-stroke: 0.2px #ff8400;
     color: #f1cd1a;
     text-decoration: none;
-    line-height: 77px;
+    line-height: 57.75px;
     position: relative;
     display: inline-block;
     text-align: center;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease; 
 }
 
-nav a:hover:not(:nth-child(1)) {
-    font-size: 1.1rem; /* Increase font size on hover */
+nav a:hover {
+    font-size: 14.25px;
     font-weight: bolder;
     -webkit-text-stroke: 0.1px #f1cd1a;
     color: #ffffff;
 }
 
-nav .animation {
+nav .animation{
     position: absolute;
     height: 100%;
     top: 0;
     z-index: -1;
     background-image: url('textures/minecraft-redstone-lamp-on-redstone.png');
-    background-size: 76.8px;
-    width: 100px; /* Adjust as needed */
+    background-size: 57.6px;
+    width: 100px;
     transition: opacity 1s ease-out 0s;
     opacity: 0;
 }
 
-nav a:hover ~ .animation {
+nav a:hover ~.animation{
     opacity: 1;
 }
 
-@media (max-width: 992px) {
-    nav {
-        width: 90%;
-        max-width: 100%; /* Set maximum width to full width */
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-    }
-    
-    nav a {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
-}
-
-/* Adjust widths for each menu item */
-a:nth-child(1) { width: 20%; }
-a:nth-child(2) { width: 30%; }
-a:nth-child(3) { width: 20%; }
-a:nth-child(4) { width: 20%; }
-a:nth-child(5) { width: 30%; }
-
 a:nth-child(1){
+    width: 115.2px;
     background-image: url('textures/minecraft-redstone-lamp-on-redstone.png');
-    background-size: 76.8px;
-    font-size: 19px;
+    background-size: 57.6px;
+    font-size: 14.25px;
     font-weight: bolder;
     -webkit-text-stroke: 0.1px #f1cd1a;
     color: #ffffff;
-    width: 153.6px;
 }
 
 nav .start-home,a:nth-child(1):hover~.animation{
-    width: 153.6px;
+    width: 115.2px;
     left: 0px;
 }
 
 a:nth-child(2){
-    width: 230.4px;
+    width: 172.8px;
 }
 
 nav .start-dimensions,a:nth-child(2):hover~.animation{
-    width: 230.4px;
-    left: 153.6px;
+    width: 172.8px;
+    left: 115.2px;
 }
 
 a:nth-child(3){
-    width: 153.6px;
+    width: 115.2px;
 }
 
 nav .start-biomes,a:nth-child(3):hover~.animation{
-    width: 153.6px;
-    left: 384px;
+    width: 115.2px;
+    left: 288px;
 }
 
 a:nth-child(4){
-    width: 153.6px;
+    width: 115.2px;
 }
 
 nav .start-mobs,a:nth-child(4):hover~.animation{
-    width: 153.6px;
-    left: 537.6px;
+    width: 115.2px;
+    left: 403.2px;
 }
 
 a:nth-child(5){
-    width: 230.4px;
+    width: 172.8px;
 }
 
 nav .start-contact,a:nth-child(5):hover~.animation{
-    width: 230.4px;
-    left: 691.2px;
+    width: 172.8px;
+    left: 518.4px;
+}
+.icons{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+}
+
+.special_icons{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
 }
 
 /*============================================================*/
 
-.saplings{
-    width: 24px;
-    height: 24px;
-    position: relative;
-    top: 4px;
-}
+@media only screen and (max-width: 750px) {
 
-.icons{
-    width: 32px;
-    height: 32px;
-    position: relative;
-    top: 8px;
-}
+    nav {
+        width: calc(691.5px * 0.6667); /* 33.33% smaller */
+        height: calc(57.75px * 0.6667); /* 33.33% smaller */
+        background-size: calc(57.6px * 0.6667); /* 33.33% smaller */
+    }
 
-.skinhead{
-    width: 38px;
-    height: 38px;
-    position: relative;
-    top: 12px;
+    nav a {
+        font-size: calc(12.75px * 0.6667); /* 33.33% smaller */
+        line-height: calc(57.75px * 0.6667); /* 33.33% smaller */
+    }
+
+    nav .animation {
+        background-size: calc(57.6px * 0.6667); /* 33.33% smaller */
+    }
+
+    nav a:hover {
+        font-size: calc(14.25px * 0.6667); /* 33.33% smaller on hover */
+    }
+
+    a:nth-child(1){
+        width: calc(115.2px * 0.6667);
+        background-size: calc(57.6px * 0.6667);
+        font-size:  calc(14.25px * 0.6667);
+        white-space: nowrap; /* Prevent text from wrapping onto multiple lines */
+    }
+    
+    nav .start-home, a:nth-child(1):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: 0px;
+    }
+    
+    a:nth-child(2) {
+        width: calc(172.8px * 0.6667);
+    }
+    
+    nav .start-dimensions, a:nth-child(2):hover~.animation {
+        width: calc(172.8px * 0.6667);
+        left: calc(115.2px * 0.6667);
+    }
+    
+    a:nth-child(3) {
+        width: calc(115.2px * 0.6667);
+    }
+    
+    nav .start-biomes, a:nth-child(3):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: calc(288px * 0.6667);
+    }
+    
+    a:nth-child(4) {
+        width: calc(115.2px * 0.6667);
+    }
+    
+    nav .start-mobs, a:nth-child(4):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: calc(403.2px * 0.6667);
+    }
+    
+    a:nth-child(5) {
+        width: calc(172.8px * 0.6667);
+    }
+    
+    nav .start-contact, a:nth-child(5):hover~.animation {
+        width: calc(172.8px * 0.6667);
+        left: calc(518.4px * 0.6667);
+    }
+
+    .icons {
+        width: calc(24px * 0.6667); /* 33.33% smaller */
+        height: calc(24px * 0.6667); /* 33.33% smaller */
+        top: calc(6px * 0.6667); /* 33.33% smaller */
+    }
+
+    .special_icons {
+        width: calc(18px * 0.6667); /* 33.33% smaller */
+        height: calc(18px * 0.6667); /* 33.33% smaller */
+        top: calc(3px * 0.6667); /* 33.33% smaller */
+    }
+
 }
 
 /*============================================================*/

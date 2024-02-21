@@ -134,11 +134,9 @@
         
         <!-- ============================================================ -->
 
-        <p> Biomes in Minecraft are distinct regions within the game world that feature unique environmental characteristics, terrain features, and wildlife. From lush forests and towering mountains to desolate deserts and eerie swamps, each biome offers players a diverse and immersive experience as they explore the vast landscapes of the game. </p>
-        <p> In the Overworld, players will encounter a wide variety of biomes, each with its own set of features and resources to discover. From the familiar forests and plains to more exotic locales like jungles and snowy tundras, the Overworld boasts a rich tapestry of environments waiting to be explored. Additionally, with the introduction of updates and expansions, new biomes such as the lush caves have been added, further expanding the diversity of the Overworld's landscapes. </p>
-        <p> Venturing into the Nether presents a stark contrast to the Overworld, with its fiery terrain and otherworldly atmosphere. Here, players will encounter biomes such as the crimson forest, warped forest, and soul sand valley, each with its own unique hazards and resources. The Nether offers a challenging environment for players to navigate, with treacherous terrain and hostile mobs lurking around every corner. </p>
-        <p> In the End, players will find a dimension unlike any other, with its barren landscapes and floating islands of end stone. Biomes such as the End Midlands and End Barrens offer a desolate and eerie backdrop for players to explore as they journey through this mysterious dimension. The End's unique biomes are home to valuable resources and challenges, including the formidable ender dragon and the elusive shulkers found within end cities. </p>
-        <p> Overall, biomes play a crucial role in shaping the world of Minecraft, providing players with a diverse array of environments to explore and inhabit. Whether embarking on epic adventures, building sprawling settlements, or simply admiring the beauty of the natural world, biomes offer endless opportunities for discovery and exploration in the ever-expanding universe of Minecraft. </p>
+        <p> Biomes in Minecraft refer to distinct regions within the game's world, each characterized by unique environmental features and landscapes. These variations include differences in terrain, vegetation, wildlife, and overall aesthetics. One notable aspect of biomes is the diversity in terrain, ranging from expansive plains to towering mountains, dense forests, vast deserts, and icy tundras. </p>
+        <p> In addition to terrain, biomes also differ in their flora and fauna. Players may encounter various types of trees, plants, and flowers, each specific to certain biomes. Furthermore, wildlife such as animals and mobs vary between biomes, with some regions being home to passive creatures like sheep and cows, while others harbor more hostile mobs such as zombies or skeletons. </p>
+        <p> Another defining characteristic of biomes is their distinct visual appearance. This includes differences in grass and foliage colors, water and sky hues, and overall atmospheric ambiance. Players can immerse themselves in diverse landscapes as they explore the vast and varied biomes of the Minecraft world, each offering its own unique challenges and opportunities for adventure. </p>
         
         <!-- ============================================================ -->
 
@@ -462,6 +460,8 @@
     <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
     <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
     
+    <!-- ============================================================ -->
+    
     <script>
 
         var numElements = 30;
@@ -495,21 +495,30 @@
     <!-- ============================================================ -->
 
     <nav>
-        <a href="../../Home_Webpage.html"> <img src="../../player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="../../icons/minecraft-bed-blue.png" class="icons"> </a>
-        <a href="../../other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="../../icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="../../icons/minecraft-map-colored.png" class="icons"> </a>
-        <a href="#"> <img src="../../icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="../../icons/minecraft-sapling-azalea.png" class="saplings"> </a>
-        <a href="../../other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="../../icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="../../icons/minecraft-piglin-head.png" class="icons"> </a>
-        <a href="../../other_webpages/contact_webpage/Contact_Webpage.html"> <img src="../../icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="../../icons/minecraft-book-and-quill.png" class="icons"> </a> 
+        <a href="../../index.html"> <img src="../../player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png" class="special_icons"> Home <img src="../../icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="../dimensions_webpage/Dimensions_Webpage.html"> <img src="../../icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="../../icons/minecraft-map-colored.png" class="icons"> </a>
+        <a href="#"> <img src="../../icons/minecraft-sapling-cherry.png" class="special_icons"> Biomes <img src="../../icons/minecraft-sapling-azalea.png" class="special_icons"> </a>
+        <a href="../mobs_webpage/Mobs_Webpage.html"> <img src="../../icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="../../icons/minecraft-piglin-head.png" class="icons"> </a>
+        <a href="../contact_webpage/Contact_Webpage.html"> <img src="../../icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="../../icons/minecraft-book-and-quill.png" class="icons"> </a> 
         <div class="animation start-biomes"></div>
     </nav>
+
+    <script>
+        window.addEventListener('resize', function() {
+            var nav = document.querySelector('nav');
+            if (window.innerWidth <= 768) {
+                nav.classList.add('smaller-nav');
+            } else {
+                nav.classList.remove('smaller-nav');
+            }
+        });
+
+    </script>
 
     <!-- ============================================================ -->
 
     <audio id="menu_sound" preload="auto"> <source src="../../sounds/minecraft-menu-sound.mp3" type="audio/mpeg"> </audio>
     <audio id="swoosh_sound" preload="auto"> <source src="../../sounds/minecraft-swoosh-sound.mp3" type="audio/mpeg"> </audio>
-    <audio id="end_dimension" preload="auto"> <source src="../../sounds/minecraft-end-dimension-sound.mp3" type="audio/mpeg"> </audio>
-    <audio id="disc_otherside_cut" preload="auto"> <source src="../../sounds/minecraft-disc-otherside-cut.mp3" type="audio/mpeg"> </audio>
-    <audio id="mob_ravager_sound" preload="auto"> <source src="../../sounds/minecraft-ravager.mp3" type="audio/mpeg"> </audio>
     <audio id="villager_sound" preload="auto"> <source src="../../sounds/minecraft-villager-sound-trading-accepted.mp3" type="audio/mpeg"> </audio>
     
     <!-- ============================================================ -->
@@ -525,43 +534,19 @@
         });
 
         var sound2 = $("#swoosh_sound")[0];
-        $(".minecraft_playnow, .aboutme_title, .dimensions_title, .biomes_title, .mobs_title, .overworld_title, .nether_title, .end_title").mouseenter(function() {
+        $(".minecraft_playnow, .overworld_title, .nether_title, .end_title").mouseenter(function() {
             sound2.currentTime = 0;
             sound2.play();
         }).mouseleave(function() {
             sound2.pause();
         });
 
-        var sound3 = $("#end_dimension")[0];
-        $(".dimensions_title").mouseenter(function() {
+        var sound3 = $("#villager_sound")[0];
+        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
             sound3.currentTime = 0;
             sound3.play();
         }).mouseleave(function() {
             sound3.pause();
-        });
-
-        var sound4 = $("#disc_otherside_cut")[0];
-        $(".biomes_title").mouseenter(function() {
-            sound4.currentTime = 0;
-            sound4.play();
-        }).mouseleave(function() {
-            sound4.pause();
-        });
-
-        var sound5 = $("#mob_ravager_sound")[0];
-        $(".mobs_title").mouseenter(function() {
-            sound5.currentTime = 0;
-            sound5.play();
-        }).mouseleave(function() {
-            sound5.pause();
-        });
-
-        var sound6 = $("#villager_sound")[0];
-        $(".minecraft-skin-pointing, .minecraft-skin-sitting-pointing").mouseenter(function() {
-            sound6.currentTime = 0;
-            sound6.play();
-        }).mouseleave(function() {
-            sound6.pause();
         });
 
     </script>
@@ -569,6 +554,7 @@
     <!-- ============================================================ -->
 
     <script>
+
         $(document).ready(function() {
             // Function to add enlarged class to images
             function enlargeImages() {
@@ -584,6 +570,7 @@
             $(".aboutme_title").hover(enlargeImages, resetImages);
             $(".username").hover(enlargeImages, resetImages);
         });
+
     </script>   
     
     <!-- ============================================================ -->
@@ -620,18 +607,12 @@
             // Check if the clicked element is an nth-child of the left container
             const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
             if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
-                // Play a sound indicating the block is suitable
-                const suitableSound = new Audio('suitable-sound.mp3');
-                suitableSound.play();
                 return; // Do not proceed further
             }
 
             // Check if the clicked element is an nth-child of the right container
             const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
             if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
-                // Play a sound indicating the block is suitable
-                const suitableSound = new Audio('suitable-sound.mp3');
-                suitableSound.play();
                 return; // Do not proceed further
             }
 
@@ -680,6 +661,25 @@
         });
     
     </script>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        window.addEventListener('resize', function() {
+
+        var mainElement = document.querySelector('main');
+
+        if (window.innerWidth <= 1038) {
+            mainElement.style.zIndex = '1';
+        } else {
+            mainElement.style.zIndex = 'auto';
+        }
+    });
+
+    </script>
+    
+    <!-- ============================================================ -->
 
 </body>
 

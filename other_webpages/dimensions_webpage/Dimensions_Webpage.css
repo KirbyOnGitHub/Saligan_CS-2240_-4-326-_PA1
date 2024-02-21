@@ -1,8 +1,8 @@
 
 .leaf {
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 22.5px;
+    height: 22.5px;
     z-index: 0;
     background-size: cover;
 }
@@ -53,16 +53,13 @@ main{
     position: relative;
     width: fit-content; 
     width: 100%;
-    margin-top: 0px;
-    margin: auto;
 }
 
 .homepage_video{
+    overflow: hidden;
     top: 0px;
     height: 100%;
     width: 100%;
-    border-bottom: 10px solid black;
-    margin: auto;
     display: block;
     margin-top: 20px;;
     margin-bottom: 5%;
@@ -74,8 +71,7 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 35%; /* Adjust this value as needed */
-    max-width: 700px; /* Limit the maximum width */
+    width: 35%; 
 }
 
 .minecraft_playnow {
@@ -84,13 +80,12 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 20%; /* Adjust this value as needed */
-    max-width: 400px; /* Limit the maximum width */
-    transition: width 0.3s ease;
+    width: 15%; 
+    transition: width 0.5s ease;
 }
 
 .minecraft_playnow:hover {
-    width: 35%; /* Adjust the hover width */
+    width: 20%; 
 }
 
 /*============================================================*/
@@ -98,15 +93,16 @@ main{
 p{
     position: relative;
     color: rgb(190, 188, 188);
-    background-color: #213144;
-    border: 5px solid #131c28;
+    background-image: repeating-linear-gradient(to right, #213145, #3d5779, #263f60);
+    border: 3px solid #131c28;
     border-radius: 5px;
     margin-top: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
+    overflow: hidden;
 }
 
 .username{
@@ -121,42 +117,13 @@ p{
 
 .linebreaker{
     background-image: url('../../textures/minecraft-bamboo-customplanks.png');
-    background-size: 78.4px;
+    background-size: 58.8px;
     border: 2px solid #8da781;
     margin-top: 5%;
     margin-left: 12%;
     margin-right: 12%;
     margin-bottom: 5%;
-    height:20px;
-}
-
-/*============================================================*/
-
-.aboutme_title {
-    height: 100%;
-    width: 35%;
-    transition: all 0.3s ease;
-    padding: 1rem;
-    margin: 25px;
-}
-
-.aboutme_title:hover {
-    height: 80%;
-    width: 45%;
-}
-
-.aboutme_title:hover::before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
-
-.aboutme_title:hover::after {
-    content: ''; 
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
+    height: 15px;
 }
 
 /*============================================================*/
@@ -165,9 +132,9 @@ p{
     position: fixed;
     left: 0;
     top: 0;
-    width: 77px;
+    width: 57.75px;
     height: 100%;
-    background-size: 76.8px;
+    background-size: 57.6px;
     background-image: url('../../textures/minecraft-cherry-log-side.png'); 
 }
 
@@ -175,23 +142,23 @@ p{
     position: fixed;
     right: 0;
     top: 0;
-    width: 77px;
+    width: 57.75px;
     height: 100%;
-    background-size: 76.8px;
+    background-size: 57.6px;
     background-image: url('../../textures/minecraft-cherry-log-side.png'); 
 }
 
 .bottombar{
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 77px;
-    background-size: 76.8px;
+    height: 57.75px;
+    background-size: 57.6px;
     background-image: url('../../textures/minecraft-moss.png'); 
-    border-top: 5px solid #265e37;
+    border-top: 3px solid #265e37;
     display: grid;
     grid-template-columns: repeat(27, 1fr); 
     grid-template-rows: auto;
@@ -208,11 +175,11 @@ p{
 .bottombar span:nth-child(25)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 50%;
+    top: -74px;
+    left: 30%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-1.png');
     background-size: cover;
 }
@@ -223,11 +190,11 @@ p{
 .bottombar span:nth-child(22)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 50%;
+    top: -74px;
+    left: 70%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-3.png');
     background-size: cover;
 }
@@ -240,11 +207,11 @@ p{
 .bottombar span:nth-child(26)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 85%;
+    top: -74px;
+    left: 40%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-4.png');
     background-size: cover;
 }
@@ -254,11 +221,11 @@ p{
 .bottombar span:nth-child(17)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 85%;
+    top: -74px;
+    left: 80%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-2.png');
     background-size: cover;
 }
@@ -270,11 +237,11 @@ p{
 .bottombar span:nth-child(24)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 90%;
+    top: -74px;
+    left: 60%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-5.png');
     background-size: cover;
 }
@@ -285,11 +252,11 @@ p{
 .bottombar span:nth-child(27)::after {
     content: '';
     position: absolute;
-    top: -100px;
-    left: 90%;
+    top: -74px;
+    left: 20%;
     transform: translateX(-50%);
-    width: 30px; 
-    height: 30px; 
+    width: 22.5px; 
+    height: 22.5px; 
     background-image: url('../../leaves/minecraft-pink-petals-2D-6.png');
     background-size: cover;
 }
@@ -298,37 +265,41 @@ p{
     grid-column: 1 / span 27;
     grid-row: 1; 
     text-align: center;
-    line-height: 77px;
+    line-height: 57.75px;
     color:white;
+    font-size: 12px;
 }
 
 /*============================================================*/
 
 .left-grid-container-cherryleaves {
     display: grid;
-    grid-template-columns: repeat(4, 77px); 
-    grid-template-rows: repeat(7, 77px); 
+    grid-template-columns: repeat(4, 57.75px); 
+    grid-template-rows: repeat(7, 57.75px); 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
 }
 
 .left-grid-cherryleaves-block{
-    background-size: 76.8px;
+    background-size: 57.6px;
 }
 
 .left-grid-cherryleaves-block:nth-child(1),
 .left-grid-cherryleaves-block:nth-child(2),
+.left-grid-cherryleaves-block:nth-child(3),
 .left-grid-cherryleaves-block:nth-child(5),
 .left-grid-cherryleaves-block:nth-child(6),
 .left-grid-cherryleaves-block:nth-child(7),
+.left-grid-cherryleaves-block:nth-child(8),
 .left-grid-cherryleaves-block:nth-child(9),
 .left-grid-cherryleaves-block:nth-child(10),
 .left-grid-cherryleaves-block:nth-child(11),
+.left-grid-cherryleaves-block:nth-child(12),
 .left-grid-cherryleaves-block:nth-child(13),
 .left-grid-cherryleaves-block:nth-child(14),
 .left-grid-cherryleaves-block:nth-child(15),
+.left-grid-cherryleaves-block:nth-child(16),
 .left-grid-cherryleaves-block:nth-child(17),
 .left-grid-cherryleaves-block:nth-child(18),
 .left-grid-cherryleaves-block:nth-child(19),
@@ -357,29 +328,33 @@ p{
 
 .right-grid-container-cherryleaves {
     display: grid;
-    grid-template-columns: repeat(4, 77px); 
-    grid-template-rows: repeat(7, 77px); 
+    grid-template-columns: repeat(4, 57.75px); 
+    grid-template-rows: repeat(7, 57.75px); 
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
 }
 
 .right-grid-cherryleaves-block{
-    background-size: 76.8px;
+    background-size: 57.6px;
 }
 
+.right-grid-cherryleaves-block:nth-child(2),
 .right-grid-cherryleaves-block:nth-child(3),
 .right-grid-cherryleaves-block:nth-child(4),
+.right-grid-cherryleaves-block:nth-child(5),
 .right-grid-cherryleaves-block:nth-child(6),
 .right-grid-cherryleaves-block:nth-child(7),
 .right-grid-cherryleaves-block:nth-child(8),
+.right-grid-cherryleaves-block:nth-child(9),
 .right-grid-cherryleaves-block:nth-child(10),
 .right-grid-cherryleaves-block:nth-child(11),
 .right-grid-cherryleaves-block:nth-child(12),
+.right-grid-cherryleaves-block:nth-child(13),
 .right-grid-cherryleaves-block:nth-child(14),
 .right-grid-cherryleaves-block:nth-child(15),
 .right-grid-cherryleaves-block:nth-child(16),
+.right-grid-cherryleaves-block:nth-child(17),
 .right-grid-cherryleaves-block:nth-child(19),
 .right-grid-cherryleaves-block:nth-child(20),
 .right-grid-cherryleaves-block:nth-child(23),
@@ -405,35 +380,33 @@ p{
 /*============================================================*/
 
 .minecraft-skin-pointing {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     height: auto;
-    margin: -20px;
-    right: -45px;
-    bottom: 60px;
-    width: 300px;
+    right: -35px;
+    bottom: 35px;
+    width: 180px;
     pointer-events: auto;
     transition: all 0.3s ease; 
 }
 
 .minecraft-skin-pointing:hover {
-    width: 320px;
+    width: 200px;
 }
 
 .minecraft-skin-sitting-pointing {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     height: auto;
-    margin: -20px;
-    left: -45px;
-    bottom: -10px;
-    width: 300px;
+    left: -35px;
+    bottom: -5px;
+    width: 180px;
     pointer-events: auto;
     transition: all 0.3s ease; 
 }
 
 .minecraft-skin-sitting-pointing:hover {
-    width: 320px;
+    width: 200px;
 }
 
 .minecraft-skin-pointing.enlarged,
@@ -442,39 +415,37 @@ p{
 }
 
 @keyframes enlargeAnimation {
-    0% { width: 300px; }
-    100% { width: 330px; }
+    0% { width: 180px; }
+    100% { width: 220px; }
 }
 
 /*============================================================*/
 
 nav {
     font-family: 'Monocraft';
-    src: url(custom_fonts/Monocraft.ttf);
+    src: url(../../custom_fonts/Monocraft.ttf);
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 922px;
-    height: 77px;
+    width: 691.5px;
+    height: 57.75px;
     background-image: url('../../textures/minecraft-redstone-lamp-off-redstone.png');
-    background-size: 76.8px;
-    font-size: 0;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
-    z-index: 1000;
+    background-size: 57.6px;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav a {
-    font-size: 17px;
+    font-size: 12.75px;
     font-weight: bold;
     text-transform: uppercase;
     -webkit-text-stroke: 0.2px #ff8400;
     color: #f1cd1a;
     text-decoration: none;
-    line-height: 77px;
+    line-height: 57.75px;
     position: relative;
     display: inline-block;
     text-align: center;
@@ -482,20 +453,10 @@ nav a {
 }
 
 nav a:hover {
-    font-size: 19px;
+    font-size: 14.25px;
     font-weight: bolder;
     -webkit-text-stroke: 0.1px #f1cd1a;
     color: #ffffff;
-}
-
-@media (max-width: 992px) {
-    nav {
-        width: 80%;
-        max-width: 922px; 
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-    }
 }
 
 nav .animation{
@@ -504,7 +465,7 @@ nav .animation{
     top: 0;
     z-index: -1;
     background-image: url('../../textures/minecraft-redstone-lamp-on-redstone.png');
-    background-size: 76.8px;
+    background-size: 57.6px;
     width: 100px;
     transition: opacity 1s ease-out 0s;
     opacity: 0;
@@ -515,94 +476,170 @@ nav a:hover ~.animation{
 }
 
 a:nth-child(1){
-    width: 153.6px;
+    width: 115.2px;
 }
 
 nav .start-home,a:nth-child(1):hover~.animation{
-    width: 153.6px;
+    width: 115.2px;
     left: 0px;
 }
 
 a:nth-child(2){
+    width: 172.8px;
     background-image: url('../../textures/minecraft-redstone-lamp-on-redstone.png');
-    background-size: 76.8px;
-    font-size: 19px;
+    background-size: 57.6px;
+    font-size: 14.25px;
     font-weight: bolder;
     -webkit-text-stroke: 0.1px #f1cd1a;
     color: #ffffff;
-    width: 230.4px;
 }
 
 nav .start-dimensions,a:nth-child(2):hover~.animation{
-    width: 230.4px;
-    left: 153.6px;
+    width: 172.8px;
+    left: 115.2px;
 }
 
 a:nth-child(3){
-    width: 153.6px;
+    width: 115.2px;
 }
 
 nav .start-biomes,a:nth-child(3):hover~.animation{
-    width: 153.6px;
-    left: 384px;
+    width: 115.2px;
+    left: 288px;
 }
 
 a:nth-child(4){
-    width: 153.6px;
+    width: 115.2px;
 }
 
 nav .start-mobs,a:nth-child(4):hover~.animation{
-    width: 153.6px;
-    left: 537.6px;
+    width: 115.2px;
+    left: 403.2px;
 }
 
 a:nth-child(5){
-    width: 230.4px;
+    width: 172.8px;
 }
 
 nav .start-contact,a:nth-child(5):hover~.animation{
-    width: 230.4px;
-    left: 691.2px;
+    width: 172.8px;
+    left: 518.4px;
+}
+
+.icons{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+}
+
+.special_icons{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
 }
 
 /*============================================================*/
 
-.saplings{
-    width: 24px;
-    height: 24px;
-    position: relative;
-    top: 4px;
-}
+@media only screen and (max-width: 750px) {
 
-.icons{
-    width: 32px;
-    height: 32px;
-    position: relative;
-    top: 8px;
-}
+    nav {
+        width: calc(691.5px * 0.6667); /* 33.33% smaller */
+        height: calc(57.75px * 0.6667); /* 33.33% smaller */
+        background-size: calc(57.6px * 0.6667); /* 33.33% smaller */
+    }
 
-.skinhead{
-    width: 38px;
-    height: 38px;
-    position: relative;
-    top: 12px;
+    nav a {
+        font-size: calc(12.75px * 0.6667); /* 33.33% smaller */
+        line-height: calc(57.75px * 0.6667); /* 33.33% smaller */
+    }
+
+    nav .animation {
+        background-size: calc(57.6px * 0.6667); /* 33.33% smaller */
+    }
+
+    nav a:hover {
+        font-size: calc(14.25px * 0.6667); /* 33.33% smaller on hover */
+    }
+
+    a:nth-child(1){
+        width: calc(115.2px * 0.6667);
+    }
+    
+    nav .start-home, a:nth-child(1):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: 0px;
+    }
+    
+    a:nth-child(2) {
+        width: calc(172.8px * 0.6667);
+        background-size: calc(57.6px * 0.6667);
+        font-size:  calc(14.25px * 0.6667);
+        white-space: nowrap; /* Prevent text from wrapping onto multiple lines */
+    }
+    
+    nav .start-dimensions, a:nth-child(2):hover~.animation {
+        width: calc(172.8px * 0.6667);
+        left: calc(115.2px * 0.6667);
+    }
+    
+    a:nth-child(3) {
+        width: calc(115.2px * 0.6667);
+    }
+    
+    nav .start-biomes, a:nth-child(3):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: calc(288px * 0.6667);
+    }
+    
+    a:nth-child(4) {
+        width: calc(115.2px * 0.6667);
+    }
+    
+    nav .start-mobs, a:nth-child(4):hover~.animation {
+        width: calc(115.2px * 0.6667);
+        left: calc(403.2px * 0.6667);
+    }
+    
+    a:nth-child(5) {
+        width: calc(172.8px * 0.6667);
+    }
+    
+    nav .start-contact, a:nth-child(5):hover~.animation {
+        width: calc(172.8px * 0.6667);
+        left: calc(518.4px * 0.6667);
+    }
+
+    .icons {
+        width: calc(24px * 0.6667); /* 33.33% smaller */
+        height: calc(24px * 0.6667); /* 33.33% smaller */
+        top: calc(6px * 0.6667); /* 33.33% smaller */
+    }
+
+    .special_icons {
+        width: calc(18px * 0.6667); /* 33.33% smaller */
+        height: calc(18px * 0.6667); /* 33.33% smaller */
+        top: calc(3px * 0.6667); /* 33.33% smaller */
+    }
+
 }
 
 /*============================================================*/
 
 .overworld_title {
     height: 100%;
-    width: 20%;
+    width: 30%;
     background-image: repeating-linear-gradient(to right, #287f37, #4d9559, #2a7837);
-    border: 5px solid #143c26;
+    border: 3px solid #143c26;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
 }
 
 .overworld_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2); 
 }
 
@@ -622,19 +659,47 @@ nav .start-contact,a:nth-child(5):hover~.animation{
 
 /*============================================================*/
 
+.overworld_img{
+    width: 40%;
+    margin: 2%;
+    border: 3px solid #143c26;
+    border-radius: 5px;
+}
+
+.overworld_paragraph{
+    color: rgb(5, 52, 35);
+    background-image: repeating-linear-gradient(to right, #287f37, #4d9559, #2a7837);
+    border: 3px solid #143c26;
+    border-radius: 5px;
+}
+
+.overworld_table th{
+    color: rgb(5, 52, 35);
+    background-image: repeating-linear-gradient(to right, #23612d, #2a6f36, #23612d);
+    border: 3px solid #143c26;
+}
+
+.overworld_table td{
+    color: rgb(5, 52, 35);
+    background-image: repeating-linear-gradient(to right, #287f37, #4d9559, #2a7837);
+    border: 3px solid #143c26;
+}
+
+/*============================================================*/
+
 .nether_title {
     height: 100%;
-    width: 20%;
+    width: 30%;
     background-image: repeating-linear-gradient(to right, #802020, #912d2d, #721616);
-    border: 5px solid #560b0b;
+    border: 3px solid #560b0b;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
 }
 
 .nether_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2); 
 }
 
@@ -654,19 +719,47 @@ nav .start-contact,a:nth-child(5):hover~.animation{
 
 /*============================================================*/
 
+.nether_img{
+    width: 40%;
+    margin: 2%;
+    border: 3px solid #560b0b;
+    border-radius: 5px;
+}
+
+.nether_paragraph{
+    color: rgb(54, 8, 8);
+    background-image: repeating-linear-gradient(to right, #7c2525, #983d3d, #7c2525);
+    border: 3px solid #560b0b;
+    border-radius: 5px;
+}
+
+.nether_table th{
+    color: rgb(54, 8, 8);
+    background-image: repeating-linear-gradient(to right, #6f1b1b, #7c2929, #6f1b1b);
+    border: 3px solid #560b0b;
+}
+
+.nether_table td{
+    color: rgb(54, 8, 8);
+    background-image: repeating-linear-gradient(to right, #7c2525, #983d3d, #7c2525);
+    border: 3px solid #560b0b;
+}
+
+/*============================================================*/
+
 .end_title {
     height: 100%;
-    width: 20%;
-    background-image: repeating-linear-gradient(to right, #8a2a5a, #c4377e, #95245c);
-    border: 5px solid #6d0d3f;
+    width: 30%;
+    background-image: repeating-linear-gradient(to right, #c13e7f, #db66a0, #c13e7f);
+    border: 3px solid #6d0d3f;
     border-radius: 5px;
-    padding: 2.5rem;
-    margin-bottom: 45px;
+    padding: 2%;
+    margin-bottom: 5%;
     transition: all 0.3s ease;
 }
 
 .end_title:hover {
-    width: 25%;
+    width: 35%;
     transform: scale(1.2); 
 }
 
@@ -686,14 +779,44 @@ nav .start-contact,a:nth-child(5):hover~.animation{
 
 /*============================================================*/
 
+.end_img{
+    width: 40%;
+    margin: 2%;
+    border: 3px solid #6d0d3f;
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.end_paragraph{
+    color: rgb(76, 6, 62);
+    background-image: repeating-linear-gradient(to right, #c13e7f, #db66a0, #c13e7f);
+    border: 3px solid #6d0d3f;
+    border-radius: 5px;
+}
+
+.end_table th{
+    color: rgb(76, 6, 62);
+    background-image: repeating-linear-gradient(to right, #9c3167, #c13e7f, #9c3167);
+    border: 3px solid #6d0d3f;
+}
+
+.end_table td{
+    color: rgb(76, 6, 62);
+    background-image: repeating-linear-gradient(to right, #c13e7f, #db66a0, #c13e7f);
+    border: 3px solid #6d0d3f;
+}
+
+/*============================================================*/
+
 h2 {
     text-align: center;
 }
 
 table {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
-    width: 55%;
+    width: 60%;
     border-collapse: collapse;
     margin: 0 auto;
     margin-top: 5%;
@@ -703,7 +826,7 @@ table {
 th, td {
     color: #3f3d3d;
     border: 3px solid #8f8f8f;
-    padding: 15px;
+    padding: 2%;
 }
 
 th {
@@ -723,92 +846,6 @@ td {
     justify-content: center; 
     margin-left: 10%;
     margin-right: 10%;
-}
-
-/*============================================================*/
-
-.overworld_img{
-    width: 40%;
-    margin: 2%;
-    border: 5px solid #143c26;
-    border-radius: 5px;
-}
-
-.overworld_paragraph{
-    color: rgb(5, 52, 35);
-    background-color: #2c6d37;
-    border: 5px solid #143c26;
-    border-radius: 5px;
-}
-
-.overworld_table th{
-    color: rgb(5, 52, 35);
-    background-color: #27572f;
-    border: 3px solid #143c26;
-}
-
-.overworld_table td{
-    color: rgb(5, 52, 35);
-    background-color: #2c6d37;
-    border: 3px solid #143c26;
-}
-
-/*============================================================*/
-
-.nether_img{
-    width: 40%;
-    margin: 2%;
-    border: 5px solid #560b0b;
-    border-radius: 5px;
-}
-
-.nether_paragraph{
-    color: rgb(54, 8, 8);
-    background-color: #8a2020;
-    border: 5px solid #560b0b;
-    border-radius: 5px;
-}
-
-.nether_table th{
-    color: rgb(54, 8, 8);
-    background-color: #751111;
-    border: 3px solid #560b0b;
-}
-
-.nether_table td{
-    color: rgb(54, 8, 8);
-    background-color: #8a2020;
-    border: 3px solid #560b0b;
-}
-
-/*============================================================*/
-
-.end_img{
-    width: 40%;
-    margin: 2%;
-    border: 5px solid #6d0d3f;
-    border-radius: 5px;
-    margin-top: 1%;
-    margin-bottom: 3%;
-}
-
-.end_paragraph{
-    color: rgb(82, 7, 81);
-    background-color: #c4377e;
-    border: 5px solid #6d0d3f;
-    border-radius: 5px;
-}
-
-.end_table th{
-    color: rgb(82, 7, 81);
-    background-color: #9e1b5c;
-    border: 3px solid #6d0d3f;
-}
-
-.end_table td{
-    color: rgb(82, 7, 81);
-    background-color: #c4377e;
-    border: 3px solid #6d0d3f;
 }
 
 /*============================================================*/

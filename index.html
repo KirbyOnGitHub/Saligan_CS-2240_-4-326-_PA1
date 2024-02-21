@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>Home Webpage | Saligan's Website</title>
     <link rel="shortcut icon" type="x-icon" href="player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png">
-    <link rel="stylesheet" href="Home_Webpage.css"> 
+    <link rel="stylesheet" href="index.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- ============================================================ -->
@@ -217,6 +217,8 @@
     <div class="left-grid-container-cherryleaves" id="left-grid-container"></div>
     <div class="right-grid-container-cherryleaves" id="right-grid-container"></div>
     
+    <!-- ============================================================ -->
+    
     <script>
 
         var numElements = 30;
@@ -250,13 +252,26 @@
     <!-- ============================================================ -->
 
     <nav>
-        <a href="#"> <img src="player_model/minecraft-kirbyplayzjava-skin-head-resized.png" class="skinhead"> Home <img src="icons/minecraft-bed-blue.png" class="icons"> </a>
+        <a href="#"> <img src="player_model/minecraft-kirbyplayzjava-skin-head-front-resized.png" class="special_icons"> Home <img src="icons/minecraft-bed-blue.png" class="icons"> </a>
         <a href="other_webpages/dimensions_webpage/Dimensions_Webpage.html"> <img src="icons/minecraft-end-portal-frame-filled.png" class="icons"> Dimensions <img src="icons/minecraft-map-colored.png" class="icons"> </a>
-        <a href="other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="icons/minecraft-sapling-cherry.png" class="saplings"> Biomes <img src="icons/minecraft-sapling-azalea.png" class="saplings"> </a>
+        <a href="other_webpages/biomes_webpage/Biomes_Webpage.html"> <img src="icons/minecraft-sapling-cherry.png" class="special_icons"> Biomes <img src="icons/minecraft-sapling-azalea.png" class="special_icons"> </a>
         <a href="other_webpages/mobs_webpage/Mobs_Webpage.html"> <img src="icons/minecraft-spawnegg-piglin.png" class="icons"> Mobs <img src="icons/minecraft-piglin-head.png" class="icons"> </a>
         <a href="other_webpages/contact_webpage/Contact_Webpage.html"> <img src="icons/minecraft-chalkboard-big.png" class="icons"> Contact <img src="icons/minecraft-book-and-quill.png" class="icons"> </a> 
         <div class="animation start-home"></div>
     </nav>
+
+    <script>
+
+        window.addEventListener('resize', function() {
+            var nav = document.querySelector('nav');
+            if (window.innerWidth <= 768) {
+                nav.classList.add('smaller-nav');
+            } else {
+                nav.classList.remove('smaller-nav');
+            }
+        });
+
+    </script>
 
     <!-- ============================================================ -->
 
@@ -324,6 +339,7 @@
     <!-- ============================================================ -->
 
     <script>
+
         $(document).ready(function() {
             // Function to add enlarged class to images
             function enlargeImages() {
@@ -339,6 +355,7 @@
             $(".aboutme_title").hover(enlargeImages, resetImages);
             $(".username").hover(enlargeImages, resetImages);
         });
+
     </script>   
     
     <!-- ============================================================ -->
@@ -375,18 +392,12 @@
             // Check if the clicked element is an nth-child of the left container
             const leftContainerChild = event.target.closest('.left-grid-cherryleaves-block');
             if (leftContainerChild && window.getComputedStyle(leftContainerChild).getPropertyValue('background-image') === 'none') {
-                // Play a sound indicating the block is suitable
-                const suitableSound = new Audio('suitable-sound.mp3');
-                suitableSound.play();
                 return; // Do not proceed further
             }
 
             // Check if the clicked element is an nth-child of the right container
             const rightContainerChild = event.target.closest('.right-grid-cherryleaves-block');
             if (rightContainerChild && window.getComputedStyle(rightContainerChild).getPropertyValue('background-image') === 'none') {
-                // Play a sound indicating the block is suitable
-                const suitableSound = new Audio('suitable-sound.mp3');
-                suitableSound.play();
                 return; // Do not proceed further
             }
 
@@ -435,6 +446,25 @@
         });
     
     </script>
+    
+    <!-- ============================================================ -->
+
+    <script>
+
+        window.addEventListener('resize', function() {
+
+        var mainElement = document.querySelector('main');
+
+        if (window.innerWidth <= 1038) {
+            mainElement.style.zIndex = '1';
+        } else {
+            mainElement.style.zIndex = 'auto';
+        }
+    });
+
+    </script>
+    
+    <!-- ============================================================ -->
 
 </body>
 
