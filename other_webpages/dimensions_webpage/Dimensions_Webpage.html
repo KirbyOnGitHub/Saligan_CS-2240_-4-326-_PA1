@@ -556,16 +556,22 @@
 
     <script>
 
-        window.addEventListener('resize', function() {
+        // Function to adjust zIndex based on screen width
+        function adjustZIndex() {
+            var mainElement = document.querySelector('main');
 
-        var mainElement = document.querySelector('main');
-
-        if (window.innerWidth <= 1038) {
-            mainElement.style.zIndex = '1';
-        } else {
-            mainElement.style.zIndex = 'auto';
+            if (window.innerWidth <= 1038) {
+                mainElement.style.zIndex = '1';
+            } else {
+                mainElement.style.zIndex = 'auto';
+            }
         }
-    });
+
+        // Run the function once when the page loads
+        window.addEventListener('load', adjustZIndex);
+
+        // Run the function whenever the window is resized
+        window.addEventListener('resize', adjustZIndex);
 
     </script>
     
