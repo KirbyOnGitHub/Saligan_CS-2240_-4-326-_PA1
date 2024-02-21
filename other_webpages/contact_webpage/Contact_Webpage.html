@@ -164,23 +164,26 @@
         </div>
 
         <script>
-
-            window.addEventListener('resize', function() {
-
-            var screenWidth = window.innerWidth;
-            var container1 = document.getElementById('contact_container');
-            var container2 = document.getElementById('contact_container_smaller');
-
-            if (screenWidth <= 968) {
-                container1.style.display = 'none';
-                container2.style.display = 'block';
-            } else {
-                container1.style.display = 'block';
-                container2.style.display = 'none';
+            // Function to adjust container visibility based on screen width
+            function adjustContainerVisibility() {
+                var screenWidth = window.innerWidth;
+                var container1 = document.getElementById('contact_container');
+                var container2 = document.getElementById('contact_container_smaller');
+        
+                if (screenWidth <= 968) {
+                    container1.style.display = 'none';
+                    container2.style.display = 'block';
+                } else {
+                    container1.style.display = 'block';
+                    container2.style.display = 'none';
+                }
             }
-
-            });
-
+        
+            // Run the function once when the page loads
+            window.addEventListener('load', adjustContainerVisibility);
+        
+            // Run the function whenever the window is resized
+            window.addEventListener('resize', adjustContainerVisibility);
         </script>
         
         <!-- ============================================================ -->
