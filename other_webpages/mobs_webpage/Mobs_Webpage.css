@@ -29,9 +29,13 @@
 
 *{
     font-family: 'Monocraft';
-    src: url(../../custom_fonts/Monocraft.ttf);
     text-decoration: none;
     color: inherit;
+}
+
+@font-face {
+    font-family: 'Monocraft';
+    src: url('custom_fonts/Monocraft.ttf');
 }
 
 body{
@@ -423,7 +427,6 @@ p{
 
 nav {
     font-family: 'Monocraft';
-    src: url(../../custom_fonts/Monocraft.ttf);
     position: fixed;
     top: 0;
     left: 50%;

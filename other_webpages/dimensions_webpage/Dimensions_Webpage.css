@@ -28,16 +28,14 @@
 /*============================================================*/
 
 *{
+    font-family: 'Monocraft';
     text-decoration: none;
     color: inherit;
 }
 
-body{
+@font-face {
     font-family: 'Monocraft';
-    src: url(../../custom_fonts/Monocraft.ttf);
-    background-color: rgb(255, 255, 255);
-    background-position: static;
-    background-size: 70%;
+    src: url('custom_fonts/Monocraft.ttf');
 }
 
 main{
@@ -423,7 +421,6 @@ p{
 
 nav {
     font-family: 'Monocraft';
-    src: url(../../custom_fonts/Monocraft.ttf);
     position: fixed;
     top: 0;
     left: 50%;
