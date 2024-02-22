@@ -29,9 +29,13 @@
 
 *{
     font-family: 'Monocraft';
-    src: url('../Saligan_CS-2240_-4-326-_PA1/custom_fonts/Monocraft.ttf');
     text-decoration: none;
     color: inherit;
+}
+
+@font-face {
+    font-family: 'Monocraft';
+    src: url('custom_fonts/Monocraft.ttf');
 }
 
 body{
@@ -596,7 +600,6 @@ p.mobs_paragraph{
 
 nav {
     font-family: 'Monocraft';
-    src: url(custom_fonts/Monocraft.ttf);
     position: fixed;
     top: 0;
     left: 50%;
