@@ -28,13 +28,13 @@
 /*============================================================*/
 
 *{
-    font-family: 'Monocraft';
-    src: url(custom_fonts/Monocraft.ttf);
     text-decoration: none;
     color: inherit;
 }
 
 body{
+    font-family: 'Monocraft';
+    src: url(../../custom_fonts/Monocraft.ttf);
     background-color: rgb(255, 255, 255);
     background-position: static;
     background-size: 70%;
